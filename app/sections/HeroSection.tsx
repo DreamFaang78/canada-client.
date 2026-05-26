@@ -37,7 +37,7 @@ export default function HeroSection() {
       <div className="absolute top-20 right-10 w-96 h-96 bg-big-red/20 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-20 left-10 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-24 pb-16 lg:pt-32">
+      <div className="relative z-10 container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-24 pb-16 lg:pt-32">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left — Text */}
           <div>
@@ -216,7 +216,7 @@ export default function HeroSection() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
       >
         <div className="w-6 h-10 border-2 border-white/30 rounded-full flex items-start justify-center pt-1.5">
           <motion.div
