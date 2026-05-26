@@ -1,43 +1,39 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Shield, Clock, Users, TrendingUp } from "lucide-react";
+import { IconShield, IconClock, IconUsers, IconTrending } from "@/components/ui/BIGIcons";
 
 const differentiators = [
   {
-    icon: Shield,
+    Icon: IconShield,
     title: "Independent Broker — Your Advocate",
     description:
-      "Unlike agents who work for a single insurer, Sharan works for YOU. As an independent RIBO-licensed broker, he shops across 15+ carriers to find the best coverage at the best price — with zero conflicts of interest.",
-    color: "bg-blue-50",
-    iconColor: "text-blue-600",
-    stat: "15+ Carriers",
+      "Unlike agents who work for a single insurer, Sharan works for YOU. As an independent RIBO-licensed broker, she shops across 30+ carriers to find the best coverage at the best price — with zero conflicts of interest.",
+    variant: "solid-red" as const,
+    stat: "30+ Carriers",
   },
   {
-    icon: Clock,
+    Icon: IconClock,
     title: "Fast, Personalized Service",
     description:
       "No call centres, no hold music. You get direct access to Sharan — quick responses, same-day quotes, and someone who actually knows your policy inside out. Insurance done the way it should be.",
-    color: "bg-green-50",
-    iconColor: "text-green-600",
+    variant: "solid-navy" as const,
     stat: "Same-Day Quotes",
   },
   {
-    icon: Users,
+    Icon: IconUsers,
     title: "Community-Rooted in Mississauga",
     description:
-      "Born and raised in the GTA, Sharan understands the local market deeply — from condo regulations to Ontario auto rules. He speaks your language and serves your community.",
-    color: "bg-purple-50",
-    iconColor: "text-purple-600",
+      "Born and raised in the GTA, Sharan understands the local market deeply — from condo regulations to Ontario auto rules. She speaks your language and serves your community.",
+    variant: "solid-red" as const,
     stat: "Local Expert",
   },
   {
-    icon: TrendingUp,
+    Icon: IconTrending,
     title: "Ongoing Policy Reviews",
     description:
       "Life changes. Your insurance should too. Sharan proactively reviews your policies at renewal, checks for gaps, and ensures you're never paying for coverage you don't need.",
-    color: "bg-orange-50",
-    iconColor: "text-orange-600",
+    variant: "solid-navy" as const,
     stat: "Annual Reviews",
   },
 ];
@@ -81,15 +77,13 @@ export default function WhySharan() {
                 index % 2 !== 0 ? "md:flex-row-reverse" : ""
               }`}
             >
-              {/* Icon card */}
+              {/* Glassmorphism icon card */}
               <div className="md:w-2/5 shrink-0">
-                <div
-                  className={`${item.color} rounded-2xl p-10 flex flex-col items-center justify-center gap-4 h-48`}
-                >
-                  <div className="w-16 h-16 bg-white rounded-2xl shadow-md flex items-center justify-center">
-                    <item.icon className={`w-8 h-8 ${item.iconColor}`} />
-                  </div>
-                  <span className="font-poppins font-bold text-big-dark text-lg">
+                <div className="bg-gradient-to-br from-[#1A1A2E] to-[#0F3460] rounded-2xl p-10 flex flex-col items-center justify-center gap-4 h-48 border border-white/10 shadow-xl relative overflow-hidden">
+                  {/* Glow orb */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-big-red/20 via-transparent to-transparent pointer-events-none" />
+                  <item.Icon size={64} variant={item.variant} />
+                  <span className="font-poppins font-bold text-white text-lg relative z-10">
                     {item.stat}
                   </span>
                 </div>

@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight, Star, Quote } from "lucide-react";
+import { IconChevron, IconQuoteDecor } from "@/components/ui/BIGIcons";
 import { createClient } from "@/lib/supabase/client";
 
 interface Testimonial {
@@ -153,9 +153,9 @@ export default function TestimonialsCarousel() {
               transition={{ duration: 0.4, ease: "easeInOut" }}
               className="bg-white rounded-3xl p-8 sm:p-12 shadow-xl border border-gray-100 max-w-3xl w-full relative flex flex-col md:flex-row gap-6 md:gap-10 items-start"
             >
-              {/* Large quote mark and service type badge */}
+              {/* Large quote mark decoration */}
               <div className="absolute top-6 right-8 text-big-red/10 shrink-0 select-none">
-                <Quote className="w-20 h-20 rotate-180" />
+                <IconQuoteDecor size={80} />
               </div>
 
               {/* Left Column: client and service */}
@@ -163,7 +163,9 @@ export default function TestimonialsCarousel() {
                 <div className="flex flex-col gap-2">
                   <div className="flex items-center gap-1 mb-2">
                     {Array.from({ length: current.rating }).map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-amber-400 text-amber-400" />
+                      <svg key={i} width={18} height={18} viewBox="0 0 24 24" fill="#FBBF24" className="text-amber-400">
+                        <path d="M12 2l2.93 6.07L22 9.27l-5 4.91 1.18 6.92L12 17.77l-6.18 3.33L7 14.18 2 9.27l7.07-1.2L12 2z" stroke="#F59E0B" strokeWidth="0.5"/>
+                      </svg>
                     ))}
                   </div>
                   <h3 className="font-poppins font-bold text-xl text-big-dark">{current.client_name}</h3>
@@ -192,14 +194,14 @@ export default function TestimonialsCarousel() {
               className="w-12 h-12 rounded-full bg-white shadow-md border border-gray-200 flex items-center justify-center text-charcoal hover:bg-big-red hover:text-white hover:border-big-red transition-all active:scale-95"
               aria-label="Previous testimonial"
             >
-              <ChevronLeft className="w-5 h-5" />
+              <IconChevron size={20} direction="left" />
             </button>
             <button
               onClick={handleNext}
               className="w-12 h-12 rounded-full bg-white shadow-md border border-gray-200 flex items-center justify-center text-charcoal hover:bg-big-red hover:text-white hover:border-big-red transition-all active:scale-95"
               aria-label="Next testimonial"
             >
-              <ChevronRight className="w-5 h-5" />
+              <IconChevron size={20} direction="right" />
             </button>
           </div>
         </div>

@@ -4,7 +4,9 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Phone, ChevronDown, Shield, LayoutDashboard } from "lucide-react";
+import {
+  IconShield, IconPhone, IconDashboard, IconMenu, IconX, IconChevron
+} from "@/components/ui/BIGIcons";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -68,7 +70,7 @@ export default function Navbar() {
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 group">
               <div className="w-9 h-9 rounded-lg bg-big-red flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
-                <Shield className="w-5 h-5 text-white" />
+                <IconShield size={16} variant="bare" className="text-white" />
               </div>
               <div className="leading-tight">
                 <span
@@ -109,10 +111,9 @@ export default function Navbar() {
                       }`}
                     >
                       {link.label}
-                      <ChevronDown
-                        className={`w-3.5 h-3.5 transition-transform ${
-                          openDropdown === link.label ? "rotate-180" : ""
-                        }`}
+                      <IconChevron
+                        size={14}
+                        direction={openDropdown === link.label ? "up" : "down"}
                       />
                     </button>
                     <AnimatePresence>
@@ -165,7 +166,7 @@ export default function Navbar() {
                     : "text-white hover:text-red-300"
                 }`}
               >
-                <Phone className="w-4 h-4" />
+                <IconPhone size={16} variant="bare" className={isScrolled || !isHome ? "text-charcoal" : "text-white"} />
                 (647) 501-8013
               </a>
               <div className={`w-px h-4 ${isScrolled || !isHome ? "bg-gray-300" : "bg-white/20"}`} />
@@ -178,7 +179,7 @@ export default function Navbar() {
                     : "text-white/60 hover:text-white hover:bg-white/10"
                 }`}
               >
-                <LayoutDashboard className="w-3.5 h-3.5" />
+                <IconDashboard size={14} className={isScrolled || !isHome ? "text-mid-gray" : "text-white/60"} />
                 Admin
               </Link>
               <Link
@@ -201,9 +202,9 @@ export default function Navbar() {
               id="mobile-menu-btn"
             >
               {isMobileOpen ? (
-                <X className="w-6 h-6" />
+                <IconX size={24} />
               ) : (
-                <Menu className="w-6 h-6" />
+                <IconMenu size={24} />
               )}
             </button>
           </div>
@@ -239,10 +240,9 @@ export default function Navbar() {
                         className="w-full flex items-center justify-between px-4 py-3 rounded-xl text-charcoal hover:bg-red-50 hover:text-big-red font-medium"
                       >
                         {link.label}
-                        <ChevronDown
-                          className={`w-4 h-4 transition-transform ${
-                            openDropdown === link.label ? "rotate-180" : ""
-                          }`}
+                        <IconChevron
+                          size={16}
+                          direction={openDropdown === link.label ? "up" : "down"}
                         />
                       </button>
                       <AnimatePresence>
@@ -287,7 +287,7 @@ export default function Navbar() {
                 href="tel:+16475018013"
                 className="flex items-center justify-center gap-2 px-6 py-3 border-2 border-big-red text-big-red font-semibold rounded-xl hover:bg-red-50 transition-colors"
               >
-                <Phone className="w-4 h-4" />
+                <IconPhone size={16} variant="bare" className="text-big-red" />
                 (647) 501-8013
               </a>
               <Link
@@ -300,7 +300,7 @@ export default function Navbar() {
                 href="/admin"
                 className="flex items-center justify-center gap-2 px-6 py-2.5 border border-gray-200 text-mid-gray text-xs font-semibold rounded-xl hover:bg-gray-50 hover:text-charcoal transition-colors"
               >
-                <LayoutDashboard className="w-3.5 h-3.5" />
+                <IconDashboard size={14} className="text-mid-gray" />
                 Admin Portal
               </Link>
             </div>

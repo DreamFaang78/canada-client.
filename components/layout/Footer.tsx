@@ -1,11 +1,7 @@
 import Link from "next/link";
 import {
-  Phone,
-  Mail,
-  MapPin,
-  Shield,
-  Clock,
-} from "lucide-react";
+  IconShield, IconPhone, IconMail, IconMapPin, IconClock,
+} from "@/components/ui/BIGIcons";
 
 const Facebook = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -56,7 +52,7 @@ export default function Footer() {
           <div>
             <Link href="/" className="flex items-center gap-2 mb-5">
               <div className="w-9 h-9 rounded-lg bg-big-red flex items-center justify-center">
-                <Shield className="w-5 h-5 text-white" />
+                <IconShield size={16} variant="bare" className="text-white" />
               </div>
               <div>
                 <p className="font-poppins font-bold text-lg leading-tight">
@@ -152,7 +148,7 @@ export default function Footer() {
                   href="tel:+16475018013"
                   className="flex items-start gap-3 text-sm text-white/70 hover:text-red-400 transition-colors"
                 >
-                  <Phone className="w-4 h-4 mt-0.5 shrink-0" />
+                  <IconPhone size={14} variant="bare" className="mt-0.5 shrink-0 text-white/70" />
                   (647) 501-8013
                 </a>
               </li>
@@ -161,18 +157,18 @@ export default function Footer() {
                   href="mailto:sharan@thebig.ca"
                   className="flex items-start gap-3 text-sm text-white/70 hover:text-red-400 transition-colors"
                 >
-                  <Mail className="w-4 h-4 mt-0.5 shrink-0" />
+                  <IconMail size={14} variant="bare" className="mt-0.5 shrink-0 text-white/70" />
                   sharan@thebig.ca
                 </a>
               </li>
               <li className="flex items-start gap-3 text-sm text-white/70">
-                <MapPin className="w-4 h-4 mt-0.5 shrink-0 text-big-red" />
+                <IconMapPin size={14} variant="bare" className="mt-0.5 shrink-0 text-big-red" />
                 5770 Hurontario St, Suite 100
                 <br />
                 Mississauga, ON L5R 3G5
               </li>
               <li className="flex items-start gap-3 text-sm text-white/70">
-                <Clock className="w-4 h-4 mt-0.5 shrink-0 text-big-red" />
+                <IconClock size={14} variant="bare" className="mt-0.5 shrink-0 text-big-red" />
                 <div>
                   <p>Mon–Fri: 9:00 AM – 5:00 PM</p>
                   <p>Sat: 10:00 AM – 2:00 PM</p>

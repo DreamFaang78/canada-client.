@@ -2,56 +2,48 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Home, Car, Heart, Building2, ArrowRight } from "lucide-react";
+import { IconHome, IconCar, IconHeart, IconBuilding, IconArrowRight } from "@/components/ui/BIGIcons";
 
 const services = [
   {
-    icon: Home,
+    Icon: IconHome,
     title: "Home Insurance",
     slug: "home-insurance",
     image: "/A_premium_Canadian_family_home.jpeg",
     description:
       "Protect your biggest investment with comprehensive home insurance coverage including dwelling, contents, and liability.",
     features: ["Dwelling protection", "Personal property", "Liability coverage", "Additional living expenses"],
-    color: "from-blue-500 to-blue-700",
-    bg: "bg-blue-50",
-    iconColor: "text-blue-600",
+    iconVariant: "solid-red" as const,
   },
   {
-    icon: Car,
+    Icon: IconCar,
     title: "Auto Insurance",
     slug: "auto-insurance",
     image: "/Auto Insurance Card.jpeg",
     description:
       "Drive with confidence knowing you're covered with Ontario's mandatory auto insurance and optional extras.",
     features: ["Liability coverage", "Collision & comprehensive", "Accident benefits", "Direct compensation"],
-    color: "from-green-500 to-green-700",
-    bg: "bg-green-50",
-    iconColor: "text-green-600",
+    iconVariant: "solid-navy" as const,
   },
   {
-    icon: Heart,
+    Icon: IconHeart,
     title: "Life Insurance",
     slug: "life-insurance",
     image: "/Life Insurance Card.jpeg",
     description:
       "Secure your family's financial future with term and permanent life insurance solutions tailored to your needs.",
     features: ["Term life", "Permanent life", "Critical illness", "Disability coverage"],
-    color: "from-purple-500 to-purple-700",
-    bg: "bg-purple-50",
-    iconColor: "text-purple-600",
+    iconVariant: "solid-red" as const,
   },
   {
-    icon: Building2,
+    Icon: IconBuilding,
     title: "Business Insurance",
     slug: "business-insurance",
     image: "/Business Insurance Card.jpeg",
     description:
       "Protect your business with commercial property, liability, and specialty coverage for Ontario businesses.",
     features: ["Commercial property", "General liability", "Professional liability", "Business interruption"],
-    color: "from-orange-500 to-orange-700",
-    bg: "bg-orange-50",
-    iconColor: "text-orange-600",
+    iconVariant: "solid-navy" as const,
   },
 ];
 
@@ -120,12 +112,12 @@ export default function ServicesGrid() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
                     
-                    {/* Floating Icon */}
-                    <div
-                      className={`absolute bottom-4 left-4 w-12 h-12 ${service.bg} rounded-xl flex items-center justify-center shadow-lg border border-white/20`}
-                    >
-                      <service.icon className={`w-6 h-6 ${service.iconColor}`} />
-                    </div>
+                    {/* Floating Icon — glassmorphism */}
+                    <service.Icon
+                      size={52}
+                      variant={service.iconVariant}
+                      className="absolute bottom-4 left-4 shadow-xl"
+                    />
                   </div>
 
                   <div className="p-7 flex-1 flex flex-col justify-between">
@@ -151,7 +143,7 @@ export default function ServicesGrid() {
                     {/* CTA */}
                     <div className="flex items-center gap-2 text-big-red font-semibold text-sm group-hover:gap-3 transition-all">
                       Learn More
-                      <ArrowRight className="w-4 h-4" />
+                      <IconArrowRight size={16} className="text-big-red" />
                     </div>
                   </div>
                 </div>
@@ -172,7 +164,7 @@ export default function ServicesGrid() {
             className="inline-flex items-center gap-2 bg-big-red hover:bg-deep-red text-white font-semibold px-8 py-4 rounded-xl transition-all hover:shadow-lg hover:-translate-y-0.5 text-sm"
           >
             Get a Free Quote for Any Coverage
-            <ArrowRight className="w-4 h-4" />
+            <IconArrowRight size={16} className="text-white" />
           </Link>
         </motion.div>
       </div>

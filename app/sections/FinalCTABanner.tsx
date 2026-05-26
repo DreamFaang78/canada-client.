@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import QuoteButton from "@/components/ui/QuoteButton";
-import { ShieldCheck, PhoneCall, Zap } from "lucide-react";
+import { IconShieldCheck, IconPhone, IconZap } from "@/components/ui/BIGIcons";
 
 export default function FinalCTABanner() {
   return (
@@ -24,7 +24,7 @@ export default function FinalCTABanner() {
           className="space-y-8"
         >
           <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-white font-poppins font-semibold text-xs uppercase tracking-widest">
-            <Zap className="w-3.5 h-3.5 text-big-red fill-big-red" />
+            <IconZap size={14} className="text-big-red" />
             Free, No-Obligation Quotes
           </span>
 
@@ -51,25 +51,25 @@ export default function FinalCTABanner() {
               href="tel:+16475018013"
               className="w-full sm:w-auto px-8 py-4 rounded-xl border border-white/20 text-white font-poppins font-semibold text-base hover:bg-white/5 hover:border-white/40 transition-all flex items-center justify-center gap-2 group active:scale-98"
             >
-              <PhoneCall className="w-4 h-4 text-big-red group-hover:scale-110 transition-transform" />
+              <IconPhone size={16} className="text-big-red group-hover:scale-110 transition-transform" />
               Call 647.501.8013
             </a>
           </div>
 
           {/* Indicators */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-12 border-t border-white/10 max-w-3xl mx-auto">
-            <div className="flex items-center justify-center sm:justify-start gap-2.5 text-gray-300">
-              <ShieldCheck className="w-5 h-5 text-big-red shrink-0" />
-              <span className="text-sm font-medium text-left">RIBO Licensed Professional</span>
-            </div>
-            <div className="flex items-center justify-center sm:justify-start gap-2.5 text-gray-300">
-              <ShieldCheck className="w-5 h-5 text-big-red shrink-0" />
-              <span className="text-sm font-medium text-left">30+ Insurers Compared</span>
-            </div>
-            <div className="flex items-center justify-center sm:justify-start gap-2.5 text-gray-300">
-              <ShieldCheck className="w-5 h-5 text-big-red shrink-0" />
-              <span className="text-sm font-medium text-left">Zero Broker Fees</span>
-            </div>
+              <div className="flex items-center justify-center sm:justify-start gap-2.5 text-gray-300">
+                <IconShieldCheck size={20} className="text-big-red shrink-0" />
+                <span className="text-sm font-medium text-left">RIBO Licensed Professional</span>
+              </div>
+              <div className="flex items-center justify-center sm:justify-start gap-2.5 text-gray-300">
+                <IconShieldCheck size={20} className="text-big-red shrink-0" />
+                <span className="text-sm font-medium text-left">30+ Insurers Compared</span>
+              </div>
+              <div className="flex items-center justify-center sm:justify-start gap-2.5 text-gray-300">
+                <IconShieldCheck size={20} className="text-big-red shrink-0" />
+                <span className="text-sm font-medium text-left">Zero Broker Fees</span>
+              </div>
           </div>
         </motion.div>
       </div>

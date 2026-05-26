@@ -1,7 +1,7 @@
 "use client";
 
 import AnimatedCounter from "@/components/ui/AnimatedCounter";
-import { TrendingUp } from "lucide-react";
+import { IconTrending } from "@/components/ui/BIGIcons";
 
 const stats = [
   { value: 500, suffix: "+", label: "Clients Protected", prefix: "" },
@@ -26,7 +26,7 @@ export default function StatsBar() {
                 />
               </p>
               <div className="flex items-center justify-center gap-1.5 mt-2">
-                <TrendingUp className="w-3.5 h-3.5 text-red-200" />
+                <IconTrending size={18} variant="bare" className="text-red-200" />
                 <p className="text-sm text-red-100 font-medium">{stat.label}</p>
               </div>
             </div>

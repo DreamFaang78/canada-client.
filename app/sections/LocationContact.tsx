@@ -2,7 +2,9 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle2, AlertCircle } from "lucide-react";
+import {
+  IconPhone, IconMail, IconMapPin, IconClock, IconSend, IconCheck, IconInfo
+} from "@/components/ui/BIGIcons";
 
 export default function LocationContact() {
   const [formData, setFormData] = useState({
@@ -68,7 +70,7 @@ export default function LocationContact() {
                 className="flex items-start gap-4 p-5 bg-white rounded-2xl border border-gray-100 hover:border-big-red/20 hover:shadow-md transition-all group"
               >
                 <div className="w-10 h-10 rounded-xl bg-big-red/10 flex items-center justify-center text-big-red shrink-0 group-hover:bg-big-red group-hover:text-white transition-all">
-                  <Phone className="w-5 h-5" />
+                  <IconPhone size={20} variant="bare" className="text-big-red group-hover:text-white" />
                 </div>
                 <div>
                   <h4 className="font-poppins font-bold text-sm text-big-dark uppercase tracking-wider mb-1">Call Directly</h4>
@@ -82,7 +84,7 @@ export default function LocationContact() {
                 className="flex items-start gap-4 p-5 bg-white rounded-2xl border border-gray-100 hover:border-big-red/20 hover:shadow-md transition-all group"
               >
                 <div className="w-10 h-10 rounded-xl bg-big-red/10 flex items-center justify-center text-big-red shrink-0 group-hover:bg-big-red group-hover:text-white transition-all">
-                  <Mail className="w-5 h-5" />
+                  <IconMail size={20} variant="bare" className="text-big-red group-hover:text-white" />
                 </div>
                 <div>
                   <h4 className="font-poppins font-bold text-sm text-big-dark uppercase tracking-wider mb-1">Email Sharan</h4>
@@ -93,7 +95,7 @@ export default function LocationContact() {
 
               <div className="flex items-start gap-4 p-5 bg-white rounded-2xl border border-gray-100">
                 <div className="w-10 h-10 rounded-xl bg-big-red/10 flex items-center justify-center text-big-red shrink-0">
-                  <MapPin className="w-5 h-5" />
+                  <IconMapPin size={20} variant="bare" className="text-big-red" />
                 </div>
                 <div>
                   <h4 className="font-poppins font-bold text-sm text-big-dark uppercase tracking-wider mb-1">Office Location</h4>
@@ -107,7 +109,7 @@ export default function LocationContact() {
 
               <div className="flex items-start gap-4 p-5 bg-white rounded-2xl border border-gray-100">
                 <div className="w-10 h-10 rounded-xl bg-big-red/10 flex items-center justify-center text-big-red shrink-0">
-                  <Clock className="w-5 h-5" />
+                  <IconClock size={20} variant="bare" className="text-big-red" />
                 </div>
                 <div>
                   <h4 className="font-poppins font-bold text-sm text-big-dark uppercase tracking-wider mb-1">Business Hours</h4>
@@ -186,14 +188,14 @@ export default function LocationContact() {
 
                 {status === "success" && (
                   <div className="flex items-center gap-2 p-4 bg-green-50 border border-green-200 text-green-700 rounded-xl text-sm">
-                    <CheckCircle2 className="w-5 h-5 shrink-0" />
+                    <IconCheck size={20} variant="bare" className="text-green-700 shrink-0" />
                     <span>Your message has been sent successfully! Sharan will contact you shortly.</span>
                   </div>
                 )}
 
                 {status === "error" && (
                   <div className="flex items-center gap-2 p-4 bg-red-50 border border-red-200 text-red-700 rounded-xl text-sm">
-                    <AlertCircle className="w-5 h-5 shrink-0" />
+                    <IconInfo size={20} variant="bare" className="text-red-700 shrink-0" />
                     <span>{errorMessage}</span>
                   </div>
                 )}
@@ -207,7 +209,7 @@ export default function LocationContact() {
                     <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
                   ) : (
                     <>
-                      <Send className="w-4 h-4" />
+                      <IconSend size={16} className="text-white" />
                       Send Message
                     </>
                   )}

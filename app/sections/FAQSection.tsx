@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Plus, Minus, ArrowRight } from "lucide-react";
+import { IconPlus, IconMinus, IconArrowRight } from "@/components/ui/BIGIcons";
 import Link from "next/link";
 
 interface FAQItem {
@@ -74,7 +74,7 @@ export default function FAQSection() {
                   <span className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 border transition-all ${
                     isOpen ? "border-big-red bg-big-red text-white" : "border-gray-200 bg-gray-50 text-charcoal"
                   }`}>
-                    {isOpen ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
+                    {isOpen ? <IconMinus size={16} /> : <IconPlus size={16} />}
                   </span>
                 </button>
 
@@ -106,7 +106,7 @@ export default function FAQSection() {
             className="inline-flex items-center gap-1.5 text-big-red font-poppins font-semibold text-sm hover:underline"
           >
             View all FAQs
-            <ArrowRight className="w-4 h-4" />
+            <IconArrowRight size={16} className="text-big-red" />
           </Link>
         </div>
       </div>

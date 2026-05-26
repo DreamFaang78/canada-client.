@@ -2,14 +2,17 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowRight, Phone, Star, Award, Users, CheckCircle } from "lucide-react";
+import {
+  IconStar, IconUsers, IconAward, IconCheck, IconPhone, IconArrowRight,
+  IconHome, IconCar, IconHeart, IconBuilding
+} from "@/components/ui/BIGIcons";
 import AnimatedCounter from "@/components/ui/AnimatedCounter";
 
 const trustBadges = [
-  { icon: Star, label: "Google Rating", value: "4.9", suffix: "/5" },
-  { icon: Users, label: "Clients Served", value: 500, suffix: "+" },
-  { icon: Award, label: "Years Experience", value: 12, suffix: "+" },
-  { icon: CheckCircle, label: "Carriers Partnered", value: 15, suffix: "+" },
+  { Icon: IconStar, label: "Google Rating", value: "4.9", suffix: "/5" },
+  { Icon: IconUsers, label: "Clients Served", value: 500, suffix: "+" },
+  { Icon: IconAward, label: "Years Experience", value: 12, suffix: "+" },
+  { Icon: IconCheck, label: "Carriers Partnered", value: 15, suffix: "+" },
 ];
 
 export default function HeroSection() {
@@ -90,14 +93,14 @@ export default function HeroSection() {
                 className="inline-flex items-center justify-center gap-2 bg-big-red hover:bg-deep-red text-white font-semibold px-8 py-4 rounded-xl transition-all hover:shadow-2xl hover:-translate-y-0.5 text-sm"
               >
                 Get My Free Quote
-                <ArrowRight className="w-4 h-4" />
+                <IconArrowRight size={16} className="text-white" />
               </Link>
               <a
                 href="tel:+16475018013"
                 id="hero-call-cta"
                 className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur border border-white/30 text-white font-semibold px-8 py-4 rounded-xl transition-all text-sm"
               >
-                <Phone className="w-4 h-4" />
+                <IconPhone size={16} className="text-white" />
                 (647) 501-8013
               </a>
             </motion.div>
@@ -112,7 +115,7 @@ export default function HeroSection() {
               {["No hidden fees", "Free consultation", "Same-day quotes"].map(
                 (t, i) => (
                   <span key={i} className="flex items-center gap-1.5">
-                    <CheckCircle className="w-3.5 h-3.5 text-green-400" />
+                    <IconCheck size={14} className="text-green-400" />
                     {t}
                   </span>
                 )
@@ -149,14 +152,15 @@ export default function HeroSection() {
                     <span className="font-poppins font-bold text-2xl text-big-dark">
                       4.9
                     </span>
-                    <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                    <svg width={20} height={20} viewBox="0 0 24 24" fill="#FBBF24" className="text-yellow-400">
+                      <path d="M12 2l2.93 6.07L22 9.27l-5 4.91 1.18 6.92L12 17.77l-6.18 3.33L7 14.18 2 9.27l7.07-1.2L12 2z" stroke="#F59E0B" strokeWidth="0.5"/>
+                    </svg>
                   </div>
                   <div className="flex gap-0.5 mt-1">
                     {[1, 2, 3, 4, 5].map((s) => (
-                      <Star
-                        key={s}
-                        className="w-3 h-3 fill-yellow-400 text-yellow-400"
-                      />
+                      <svg key={s} width={12} height={12} viewBox="0 0 24 24" fill="#FBBF24" className="text-yellow-400">
+                        <path d="M12 2l2.93 6.07L22 9.27l-5 4.91 1.18 6.92L12 17.77l-6.18 3.33L7 14.18 2 9.27l7.07-1.2L12 2z"/>
+                      </svg>
                     ))}
                   </div>
                 </motion.div>
@@ -189,10 +193,10 @@ export default function HeroSection() {
           {trustBadges.map((badge) => (
             <div
               key={badge.label}
-              className="bg-white/5 backdrop-blur border border-white/10 rounded-xl p-5 text-center"
+              className="bg-white/5 backdrop-blur border border-white/10 rounded-xl p-5 text-center flex flex-col items-center"
             >
-              <badge.icon className="w-6 h-6 text-red-400 mx-auto mb-2" />
-              <p className="font-poppins font-bold text-2xl text-white">
+              <badge.Icon size={40} variant="glass-dark" className="mb-2" />
+              <p className="font-poppins font-bold text-2xl text-white mt-1">
                 {typeof badge.value === "number" ? (
                   <AnimatedCounter
                     target={badge.value}
