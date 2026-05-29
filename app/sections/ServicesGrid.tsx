@@ -9,7 +9,8 @@ const services = [
     Icon: IconHome,
     title: "Home Insurance",
     slug: "home-insurance",
-    image: "/A_premium_Canadian_family_home.jpeg",
+    image: "/Home Insurance.jpeg",
+    imagePosition: "center 25%",
     description:
       "Protect your biggest investment with comprehensive home insurance coverage including dwelling, contents, and liability.",
     features: ["Dwelling protection", "Personal property", "Liability coverage", "Additional living expenses"],
@@ -19,7 +20,8 @@ const services = [
     Icon: IconCar,
     title: "Auto Insurance",
     slug: "auto-insurance",
-    image: "/Auto Insurance Card.jpeg",
+    image: "/Auto Insurance.jpeg",
+    imagePosition: "center 15%",
     description:
       "Drive with confidence knowing you're covered with Ontario's mandatory auto insurance and optional extras.",
     features: ["Liability coverage", "Collision & comprehensive", "Accident benefits", "Direct compensation"],
@@ -29,7 +31,8 @@ const services = [
     Icon: IconHeart,
     title: "Life Insurance",
     slug: "life-insurance",
-    image: "/Life Insurance Card.jpeg",
+    image: "/Consultation With Clients.jpeg",
+    imagePosition: "center 20%",
     description:
       "Secure your family's financial future with term and permanent life insurance solutions tailored to your needs.",
     features: ["Term life", "Permanent life", "Critical illness", "Disability coverage"],
@@ -39,7 +42,8 @@ const services = [
     Icon: IconBuilding,
     title: "Business Insurance",
     slug: "business-insurance",
-    image: "/Business Insurance Card.jpeg",
+    image: "/Business Insurance.jpeg",
+    imagePosition: "center 15%",
     description:
       "Protect your business with commercial property, liability, and specialty coverage for Ontario businesses.",
     features: ["Commercial property", "General liability", "Professional liability", "Business interruption"],
@@ -104,11 +108,12 @@ export default function ServicesGrid() {
               <Link href={`/services/${service.slug}`} className="group block">
                 <div className="bg-white rounded-3xl overflow-hidden border border-gray-100 hover:border-transparent hover:shadow-2xl transition-all duration-300 h-full flex flex-col">
                   {/* Image Header with float icon */}
-                  <div className="relative h-56 w-full overflow-hidden bg-gray-100 shrink-0">
+                  <div className="relative h-64 w-full overflow-hidden bg-gray-100 shrink-0">
                     <img
                       src={service.image}
                       alt={service.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      style={{ objectPosition: service.imagePosition }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
                     

@@ -19,8 +19,8 @@ const faqs: FAQItem[] = [
   },
   {
     category: "general",
-    question: "Is Sharan Deol licensed to operate in Ontario?",
-    answer: "Yes, Sharan Deol is fully licensed by the Registered Insurance Brokers of Ontario (RIBO), which is the self-regulatory body for insurance brokers in Ontario. She is also licensed for Life, Accident & Sickness insurance, allowing her to provide comprehensive personal and commercial insurance solutions."
+    question: "Is Sharan Kaur licensed to operate in Ontario?",
+    answer: "Yes, Sharan Kaur is fully licensed by the Registered Insurance Brokers of Ontario (RIBO), which is the self-regulatory body for insurance brokers in Ontario. She is also licensed for Life, Accident & Sickness insurance, allowing her to provide comprehensive personal and commercial insurance solutions."
   },
   {
     category: "general",

@@ -23,13 +23,13 @@ interface ServiceDetail {
 const getServiceImageFallback = (slug: string) => {
   switch (slug) {
     case "home-insurance":
-      return "/A_premium_Canadian_family_home.jpeg";
+      return "/Home Insurance.jpeg";
     case "auto-insurance":
-      return "/Auto Insurance Card.jpeg";
+      return "/Auto Insurance.jpeg";
     case "life-insurance":
-      return "/Life Insurance Card.jpeg";
+      return "/Consultation With Clients.jpeg";
     case "business-insurance":
-      return "/Business Insurance Card.jpeg";
+      return "/Business Insurance.jpeg";
     default:
       return "";
   }
@@ -49,7 +49,7 @@ const FALLBACK_SERVICE_DETAILS: Record<string, ServiceDetail> = {
     short_description: "Protect your biggest investment with comprehensive home coverage tailored for Mississauga homeowners.",
     long_description: "Your home is likely your most valuable asset. Sharan compares 30+ insurers to find the coverage that actually fits — whether you own a detached home, condo, or rental property in Mississauga. We go beyond the basics to make sure you're protected when it matters most.",
     icon_name: "Home",
-    image_url: "/A_premium_Canadian_family_home.jpeg",
+    image_url: "/Home Insurance.jpeg",
     coverages: [
       { title: "Dwelling Coverage", description: "Rebuilding costs if your home is damaged by fire, storm, or other covered events" },
       { title: "Personal Property", description: "Replacement of furniture, electronics, clothing, and valuables" },
@@ -65,7 +65,7 @@ const FALLBACK_SERVICE_DETAILS: Record<string, ServiceDetail> = {
     short_description: "Ontario's best auto rates — compared across 30+ carriers so you never overpay for your car insurance.",
     long_description: "Auto insurance is mandatory in Ontario, but overpaying isn't. Sharan analyzes your driving profile across 30+ carriers to find you the best rate with the right coverage. Whether you drive daily in Mississauga traffic or only on weekends, there's a policy that fits.",
     icon_name: "Car",
-    image_url: "/Auto Insurance Card.jpeg",
+    image_url: "/Auto Insurance.jpeg",
     coverages: [
       { title: "Third Party Liability", description: "Mandatory coverage — protects you if you injure someone or damage their property" },
       { title: "Accident Benefits", description: "Medical, rehabilitation, and income replacement if you're injured in an accident" },
@@ -81,7 +81,7 @@ const FALLBACK_SERVICE_DETAILS: Record<string, ServiceDetail> = {
     short_description: "Protect your family's financial future with the right life insurance — explained simply, without the pressure.",
     long_description: "Life insurance is one of the most important financial decisions you'll make for your family — and one of the most misunderstood. Sharan takes the time to explain your options in plain language and finds coverage that fits your life stage, income, and goals.",
     icon_name: "Heart",
-    image_url: "/Life Insurance Card.jpeg",
+    image_url: "/Consultation With Clients.jpeg",
     coverages: [
       { title: "Term Life Insurance", description: "Affordable coverage for a set period — ideal for young families and mortgage protection" },
       { title: "Whole Life Insurance", description: "Permanent coverage with a cash value component that grows over time" },
@@ -97,7 +97,7 @@ const FALLBACK_SERVICE_DETAILS: Record<string, ServiceDetail> = {
     short_description: "Comprehensive commercial coverage for Mississauga small businesses — from startup to scaling.",
     long_description: "Running a business in Mississauga means dealing with unique local risks. Sharan understands the commercial insurance landscape and builds custom packages for small businesses, contractors, retailers, and professionals. Protect your livelihood with coverage that works as hard as you do.",
     icon_name: "Briefcase",
-    image_url: "/Business Insurance Card.jpeg",
+    image_url: "/Business Insurance.jpeg",
     coverages: [
       { title: "Commercial General Liability", description: "Protection if a client is injured or property is damaged in connection with your business" },
       { title: "Commercial Property", description: "Coverage for your building, equipment, and inventory" },

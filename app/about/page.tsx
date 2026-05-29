@@ -25,6 +25,8 @@ export default function AboutPage() {
       {/* Hero Header */}
       <div className="bg-big-dark text-white py-16 md:py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-big-red/10 to-transparent z-0" />
+        {/* Subtle grid pattern */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:40px_40px] opacity-60 pointer-events-none z-0" />
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -32,12 +34,16 @@ export default function AboutPage() {
             transition={{ duration: 0.5 }}
             className="max-w-3xl"
           >
-            <span className="text-big-red font-semibold text-sm uppercase tracking-widest block mb-3">Meet Sharan Deol</span>
-            <h1 className="font-poppins font-bold text-4xl sm:text-5xl mb-6">
-              Your Trusted Insurance Partner in Mississauga
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-0.5 bg-big-red" />
+              <span className="text-big-red font-semibold text-sm uppercase tracking-widest">Meet Your Broker</span>
+            </div>
+            <h1 className="font-poppins font-bold text-4xl sm:text-5xl mb-4">
+              Sharan Kaur
             </h1>
+            <p className="text-big-red/80 font-medium text-lg mb-4">RIBO Licensed Insurance Broker · Billyard Insurance Group · Mississauga, ON</p>
             <p className="text-gray-300 text-lg sm:text-xl font-light leading-relaxed">
-              Dedicated to protecting your family, business, and assets with RIBO-licensed expertise and personalized service.
+              Dedicated to protecting your family, business, and assets with personalized service and expert guidance — not just a policy number.
             </p>
           </motion.div>
         </div>
@@ -50,8 +56,8 @@ export default function AboutPage() {
           <div className="lg:col-span-5 relative">
             <div className="aspect-[3/4] w-full max-w-md mx-auto rounded-3xl overflow-hidden shadow-2xl relative">
               <img
-                src="/Hero Section Image.jpeg"
-                alt="Sharan Deol"
+                src="/Website About Section.jpeg"
+                alt="Sharan Kaur"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -71,10 +77,10 @@ export default function AboutPage() {
           <div className="lg:col-span-7 space-y-8">
             <div className="space-y-4">
               <h2 className="font-poppins font-bold text-3xl text-big-dark">
-                Why Sharan Deol?
+                The Person Behind Your Policy
               </h2>
               <p className="text-mid-gray leading-relaxed text-base">
-                With over 8 years in the financial services sector, Sharan understands that insurance isn't just about premium costs — it's about reliable protection when life goes sideways. Born and raised in Ontario, she understands the local driving risks, housing market regulations, and business challenges specific to the Mississauga and Peel regions.
+                With over 8 years in the financial services sector, Sharan Kaur understands that insurance isn't just about premium costs — it's about reliable protection when life goes sideways. Born and raised in Ontario, she understands the local driving risks, housing market regulations, and business challenges specific to the Mississauga and Peel regions.
               </p>
               <p className="text-mid-gray leading-relaxed text-base">
                 Working under the Billyard Insurance Group (BIG) banner, Sharan has the backing of one of Canada's fastest-growing brokerages. This gives her direct access to over 30 insurance carriers, ensuring she can secure the absolute best rate-to-coverage ratio for her clients.

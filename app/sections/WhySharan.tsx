@@ -50,7 +50,7 @@ export default function WhySharan() {
             viewport={{ once: true }}
             className="text-big-red font-semibold text-sm uppercase tracking-widest mb-3"
           >
-            Why Choose Sharan
+            Why Choose Sharan Kaur
           </motion.p>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -62,6 +62,15 @@ export default function WhySharan() {
             <br />
             <span className="text-big-red">Your Neighbour.</span>
           </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.15 }}
+            className="text-mid-gray max-w-2xl mx-auto leading-relaxed"
+          >
+            Sharan Kaur isn't just an insurance broker — she's a trusted advisor who puts your family's security first. Here's what makes working with her different.
+          </motion.p>
         </div>
 
         {/* Alternating layout */}

@@ -34,7 +34,7 @@ const serviceLinks = [
 ];
 
 const quickLinks = [
-  { label: "About Sharan", href: "/about" },
+  { label: "About Sharan Kaur", href: "/about" },
   { label: "Get a Quote", href: "/get-a-quote" },
   { label: "Testimonials", href: "/testimonials" },
   { label: "FAQ", href: "/faq" },
@@ -50,27 +50,21 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand column */}
           <div>
-            <Link href="/" className="flex items-center gap-2 mb-5">
-              <div className="w-9 h-9 rounded-lg bg-big-red flex items-center justify-center">
-                <IconShield size={16} variant="bare" className="text-white" />
-              </div>
-              <div>
-                <p className="font-poppins font-bold text-lg leading-tight">
-                  Think <span className="text-red-400">BIG.</span>
-                </p>
-                <p className="text-xs text-white/50 leading-none">
-                  Billyard Insurance Group
-                </p>
-              </div>
+            <Link href="/" className="flex items-center mb-5">
+              <img
+                src="/Logo (2).png"
+                alt="Sharan Kaur Insurance Logo"
+                className="h-12 w-auto object-contain shrink-0"
+              />
             </Link>
             <p className="text-sm text-white/60 leading-relaxed mb-6">
-              Sharan Deol is a licensed RIBO insurance broker serving
+              Sharan Kaur is a licensed RIBO insurance broker serving
               Mississauga and the Greater Toronto Area with personalized
               insurance solutions.
             </p>
             <div className="flex gap-3">
               <a
-                href="https://www.facebook.com/sharandeolinsurance"
+                href="https://www.facebook.com/sharankaurinsurance"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
@@ -79,7 +73,7 @@ export default function Footer() {
                 <Facebook className="w-4 h-4" />
               </a>
               <a
-                href="https://www.linkedin.com/in/sharandeol"
+                href="https://www.linkedin.com/in/sharankaur"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
@@ -88,7 +82,7 @@ export default function Footer() {
                 <Linkedin className="w-4 h-4" />
               </a>
               <a
-                href="https://www.instagram.com/sharandeolinsurance"
+                href="https://www.instagram.com/sharankaurinsurance"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
@@ -183,7 +177,7 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs text-white/40">
-            © {new Date().getFullYear()} Sharan Deol — Billyard Insurance Group. All rights reserved.
+            © {new Date().getFullYear()} Sharan Kaur — Billyard Insurance Group. All rights reserved.
           </p>
           <div className="flex items-center gap-4 text-xs text-white/40">
             <Link href="/privacy-policy" className="hover:text-white/70 transition-colors">

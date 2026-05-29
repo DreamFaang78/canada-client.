@@ -26,11 +26,14 @@ export const metadata: Metadata = {
   ),
   title: {
     default:
-      "Sharan Deol — Insurance Broker in Mississauga | Home, Auto, Life & Business | Think BIG.",
-    template: "%s | Sharan Deol Insurance",
+      "Sharan Kaur — Insurance Broker in Mississauga | Home, Auto, Life & Business | Think BIG.",
+    template: "%s | Sharan Kaur Insurance",
   },
   description:
-    "Sharan Deol is a licensed RIBO insurance broker with Billyard Insurance Group in Mississauga. Get personalized quotes for home, auto, life, and business insurance. Call today.",
+    "Sharan Kaur is a licensed RIBO insurance broker with Billyard Insurance Group in Mississauga. Get personalized quotes for home, auto, life, and business insurance. Call today.",
+  icons: {
+    icon: "/favicon.png",
+  },
   keywords: [
     "insurance broker Mississauga",
     "home insurance Ontario",
@@ -39,15 +42,15 @@ export const metadata: Metadata = {
     "business insurance Ontario",
     "Billyard Insurance Group",
     "RIBO broker",
-    "Sharan Deol insurance",
+    "Sharan Kaur insurance",
   ],
   openGraph: {
     type: "website",
     locale: "en_CA",
     url: "https://thebig.ca",
-    siteName: "Sharan Deol — BIG Insurance",
+    siteName: "Sharan Kaur — BIG Insurance",
     title:
-      "Sharan Deol — Insurance Broker in Mississauga | Think BIG.",
+      "Sharan Kaur — Insurance Broker in Mississauga | Think BIG.",
     description:
       "Licensed RIBO broker with Billyard Insurance Group. Home, auto, life & business insurance in Mississauga, Ontario.",
     images: [
@@ -55,13 +58,13 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Sharan Deol — BIG Insurance Broker in Mississauga",
+        alt: "Sharan Kaur — BIG Insurance Broker in Mississauga",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sharan Deol — Insurance Broker Mississauga",
+    title: "Sharan Kaur — Insurance Broker Mississauga",
     description:
       "Licensed RIBO broker — Home, Auto, Life & Business Insurance. Get a free quote today.",
     images: ["/og-image.jpg"],
@@ -83,7 +86,7 @@ const localBusinessJsonLd = {
     {
       "@type": ["InsuranceAgency", "LocalBusiness"],
       "@id": "https://thebig.ca/#business",
-      name: "Sharan Deol — Billyard Insurance Group",
+      name: "Sharan Kaur — Billyard Insurance Group",
       description:
         "Licensed RIBO insurance broker offering home, auto, life, and business insurance in Mississauga, Ontario.",
       url: "https://thebig.ca",
@@ -126,7 +129,7 @@ const localBusinessJsonLd = {
     {
       "@type": "Person",
       "@id": "https://thebig.ca/#sharan",
-      name: "Sharan Deol",
+      name: "Sharan Kaur",
       jobTitle: "Licensed Insurance Broker",
       worksFor: {
         "@id": "https://thebig.ca/#business",

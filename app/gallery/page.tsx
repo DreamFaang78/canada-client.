@@ -16,44 +16,44 @@ interface GalleryItem {
 const FALLBACK_ITEMS: GalleryItem[] = [
   {
     id: "1",
-    title: "Mississauga Branch Office",
-    description: "Welcome to our modern client consultation suite at Matheson Blvd.",
-    image_url: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80",
+    title: "Personal Client Consultations",
+    description: "Sharan meeting with clients at the Mississauga branch to design custom coverage plans.",
+    image_url: "/Consultation With Clients.jpeg",
     category: "office"
   },
   {
     id: "2",
-    title: "Peel Region Business Summit",
-    description: "Sharan presenting commercial risk management tips to local business owners.",
-    image_url: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80",
+    title: "Local Mississauga Expert",
+    description: "Providing on-the-ground support and expert local insurance advice across the Peel Region.",
+    image_url: "/Local Expert Outdoor.jpeg",
     category: "community"
   },
   {
     id: "3",
-    title: "Billyard Insurance Group Annual Conference",
-    description: "Collaborating with Canada's top underwriters to secure better client rates.",
-    image_url: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80",
-    category: "events"
-  },
-  {
-    id: "4",
-    title: "Community BBQ & Charity Drive",
-    description: "Proudly sponsoring local food banks and community programs in Mississauga.",
-    image_url: "https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=800&q=80",
-    category: "community"
-  },
-  {
-    id: "5",
-    title: "Consultation Suite",
-    description: "Where we sit down to craft personalized coverage for your family.",
-    image_url: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80",
+    title: "Professional Broker Profile",
+    description: "RIBO licensed and dedicated to maintaining the highest industry standards of service excellence.",
+    image_url: "/Personal Branding Headshot.jpeg",
     category: "office"
   },
   {
+    id: "4",
+    title: "Same-Day Quote Desk",
+    description: "Operating from the Mississauga office to deliver fast, competitive comparisons across 30+ carriers.",
+    image_url: "/Same-Day Quote Desk.jpeg",
+    category: "office"
+  },
+  {
+    id: "5",
+    title: "Professional Networking & Outreach",
+    description: "Connecting with community members and business owners in the Greater Toronto Area.",
+    image_url: "/Elegant Social Media.jpeg",
+    category: "community"
+  },
+  {
     id: "6",
-    title: "GTA Broker Excellence Awards",
-    description: "Recognized for top-tier client retention and service advocacy in Ontario.",
-    image_url: "https://images.unsplash.com/photo-1531058020387-3be344559be6?auto=format&fit=crop&w=800&q=80",
+    title: "Business Representation",
+    description: "Representing Billyard Insurance Group (BIG) with modern commercial and personal insurance branding.",
+    image_url: "/Business Card Mockup.jpeg",
     category: "events"
   }
 ];

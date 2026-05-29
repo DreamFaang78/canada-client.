@@ -68,28 +68,19 @@ export default function Navbar() {
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-2 group">
-              <div className="w-9 h-9 rounded-lg bg-big-red flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
-                <IconShield size={16} variant="bare" className="text-white" />
-              </div>
-              <div className="leading-tight">
-                <span
-                  className={`font-poppins font-bold text-lg ${
-                    isScrolled || !isHome ? "text-big-dark" : "text-white"
-                  }`}
-                >
-                  Think{" "}
-                  <span className={isScrolled || !isHome ? "text-big-red" : "text-red-300"}>
-                    BIG.
-                  </span>
+            <Link href="/" className="flex items-center gap-3 group">
+              <img
+                src="/Logo (2).png"
+                alt="Sharan Kaur Insurance Logo"
+                className="h-10 sm:h-12 w-auto object-contain group-hover:scale-105 transition-transform shrink-0"
+              />
+              <div className="hidden sm:flex flex-col leading-tight">
+                <span className={`font-poppins font-bold text-sm transition-colors ${isScrolled || !isHome ? "text-big-dark" : "text-white"}`}>
+                  Sharan Kaur
                 </span>
-                <p
-                  className={`text-[10px] leading-none font-inter ${
-                    isScrolled || !isHome ? "text-mid-gray" : "text-white/70"
-                  }`}
-                >
-                  <strong className={isScrolled || !isHome ? "text-big-red font-bold" : "text-red-300 font-bold"}>Sharan Deol</strong> — Primary Insurance Broker
-                </p>
+                <span className={`text-[10px] font-medium tracking-wide transition-colors ${isScrolled || !isHome ? "text-mid-gray" : "text-white/60"}`}>
+                  RIBO Licensed Broker
+                </span>
               </div>
             </Link>
 

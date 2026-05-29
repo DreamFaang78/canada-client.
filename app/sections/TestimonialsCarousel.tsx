@@ -136,7 +136,7 @@ export default function TestimonialsCarousel() {
         <div className="text-center mb-14">
           <p className="text-big-red font-semibold text-sm uppercase tracking-widest mb-3">Testimonials</p>
           <h2 className="font-poppins font-bold text-3xl sm:text-4xl text-big-dark">
-            What Mississauga Thinks of <span className="text-big-red">Sharan Deol</span>
+            What Mississauga Thinks of <span className="text-big-red">Sharan Kaur</span>
           </h2>
         </div>
 

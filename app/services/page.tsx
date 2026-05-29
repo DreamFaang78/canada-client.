@@ -27,13 +27,13 @@ const iconMap: Record<string, any> = {
 const getServiceImageFallback = (slug: string) => {
   switch (slug) {
     case "home-insurance":
-      return "/A_premium_Canadian_family_home.jpeg";
+      return "/Home Insurance.jpeg";
     case "auto-insurance":
-      return "/Auto Insurance Card.jpeg";
+      return "/Auto Insurance.jpeg";
     case "life-insurance":
-      return "/Life Insurance Card.jpeg";
+      return "/Consultation With Clients.jpeg";
     case "business-insurance":
-      return "/Business Insurance Card.jpeg";
+      return "/Business Insurance.jpeg";
     default:
       return "";
   }
@@ -46,7 +46,7 @@ const FALLBACK_SERVICES: Service[] = [
     name: "Home Insurance",
     short_description: "Protect your biggest investment with comprehensive home coverage tailored for Mississauga homeowners.",
     icon_name: "Home",
-    image_url: "/A_premium_Canadian_family_home.jpeg",
+    image_url: "/Home Insurance.jpeg",
     coverages: [
       { title: "Dwelling Coverage", description: "Rebuilding costs if your home is damaged by fire, storm, or other covered events" },
       { title: "Personal Property", description: "Replacement of furniture, electronics, clothing, and valuables" }
@@ -58,7 +58,7 @@ const FALLBACK_SERVICES: Service[] = [
     name: "Auto Insurance",
     short_description: "Ontario's best auto rates — compared across 30+ carriers so you never overpay for your car insurance.",
     icon_name: "Car",
-    image_url: "/Auto Insurance Card.jpeg",
+    image_url: "/Auto Insurance.jpeg",
     coverages: [
       { title: "Third Party Liability", description: "Mandatory coverage — protects you if you injure someone or damage their property" },
       { title: "Accident Benefits", description: "Medical, rehabilitation, and income replacement if you're injured in an accident" }
@@ -70,7 +70,7 @@ const FALLBACK_SERVICES: Service[] = [
     name: "Life Insurance",
     short_description: "Protect your family's financial future with the right life insurance — explained simply, without the pressure.",
     icon_name: "Heart",
-    image_url: "/Life Insurance Card.jpeg",
+    image_url: "/Consultation With Clients.jpeg",
     coverages: [
       { title: "Term Life Insurance", description: "Affordable coverage for a set period — ideal for young families and mortgage protection" },
       { title: "Whole Life Insurance", description: "Permanent coverage with a cash value component that grows over time" }
@@ -82,7 +82,7 @@ const FALLBACK_SERVICES: Service[] = [
     name: "Business Insurance",
     short_description: "Comprehensive commercial coverage for Mississauga small businesses — from startup to scaling.",
     icon_name: "Briefcase",
-    image_url: "/Business Insurance Card.jpeg",
+    image_url: "/Business Insurance.jpeg",
     coverages: [
       { title: "Commercial General Liability", description: "Protection if a client is injured or property is damaged in connection with your business" },
       { title: "Commercial Property", description: "Coverage for your building, equipment, and inventory" }
@@ -135,7 +135,7 @@ export default function ServicesPage() {
               Insurance Tailored to Your Life & Business
             </h1>
             <p className="text-gray-300 text-lg sm:text-xl font-light leading-relaxed">
-              Sharan Deol shops 30+ insurance carriers to find you the best rates and comprehensive coverage.
+              Sharan Kaur shops 30+ insurance carriers to find you the best rates and comprehensive coverage.
             </p>
           </motion.div>
         </div>

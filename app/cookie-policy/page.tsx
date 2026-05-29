@@ -30,7 +30,7 @@ export default function CookiePolicyPage() {
 
         <div className="space-y-6 text-charcoal text-sm leading-relaxed font-light">
           <p>
-            This Cookie Policy explains how Sharan Deol (Billyard Insurance Group) uses cookies and similar tracking technologies on our website. It explains what these technologies are, why we use them, and your rights to control their use.
+            This Cookie Policy explains how Sharan Kaur (Billyard Insurance Group) uses cookies and similar tracking technologies on our website. It explains what these technologies are, why we use them, and your rights to control their use.
           </p>
 
           <h2 className="font-poppins font-bold text-xl text-big-dark pt-4">1. What Are Cookies?</h2>

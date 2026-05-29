@@ -76,7 +76,7 @@ export default function HeroSection() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-white/70 text-lg leading-relaxed mb-8 max-w-lg"
             >
-              Sharan Deol is your trusted insurance broker in Mississauga.
+              <span className="text-white font-semibold">Sharan Kaur</span> is your trusted, RIBO-licensed insurance broker in Mississauga.
               Home, auto, life, and business coverage — tailored to your life,
               not a template.
             </motion.p>
@@ -134,8 +134,8 @@ export default function HeroSection() {
               <div className="relative mx-auto max-w-sm overflow-visible">
                 <div className="aspect-[3/4] rounded-2xl overflow-hidden border border-white/20 shadow-2xl relative">
                   <img
-                    src="/Hero Section Image.jpeg"
-                    alt="Sharan Deol - Insurance Broker"
+                    src="/Main_Picyure.jpeg"
+                    alt="Sharan Kaur - Insurance Broker"
                     className="w-full h-full object-cover"
                   />
                 </div>

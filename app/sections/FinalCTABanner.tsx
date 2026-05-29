@@ -58,15 +58,15 @@ export default function FinalCTABanner() {
 
           {/* Indicators */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-12 border-t border-white/10 max-w-3xl mx-auto">
-              <div className="flex items-center justify-center sm:justify-start gap-2.5 text-gray-300">
+              <div className="flex items-center justify-center gap-2.5 text-gray-300">
                 <IconShieldCheck size={20} className="text-big-red shrink-0" />
                 <span className="text-sm font-medium text-left">RIBO Licensed Professional</span>
               </div>
-              <div className="flex items-center justify-center sm:justify-start gap-2.5 text-gray-300">
+              <div className="flex items-center justify-center gap-2.5 text-gray-300">
                 <IconShieldCheck size={20} className="text-big-red shrink-0" />
                 <span className="text-sm font-medium text-left">30+ Insurers Compared</span>
               </div>
-              <div className="flex items-center justify-center sm:justify-start gap-2.5 text-gray-300">
+              <div className="flex items-center justify-center gap-2.5 text-gray-300">
                 <IconShieldCheck size={20} className="text-big-red shrink-0" />
                 <span className="text-sm font-medium text-left">Zero Broker Fees</span>
               </div>

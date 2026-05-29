@@ -130,7 +130,7 @@ export default function TestimonialsPage() {
               Real Reviews from Real Clients
             </h1>
             <p className="text-gray-300 text-lg sm:text-xl font-light leading-relaxed">
-              Read how Sharan Deol has helped Mississauga families and businesses save money and protect their assets.
+              Read how Sharan Kaur has helped Mississauga families and businesses save money and protect their assets.
             </p>
           </motion.div>
         </div>
