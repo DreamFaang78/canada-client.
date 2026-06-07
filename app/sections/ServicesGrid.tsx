@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { IconHome, IconCar, IconHeart, IconBuilding, IconArrowRight } from "@/components/ui/BIGIcons";
+import { IconHome, IconCar, IconHeart, IconBuilding, IconShield, IconArrowRight } from "@/components/ui/BIGIcons";
 
 const services = [
   {
@@ -48,6 +48,17 @@ const services = [
       "Protect your business with commercial property, liability, and specialty coverage for Ontario businesses.",
     features: ["Commercial property", "General liability", "Professional liability", "Business interruption"],
     iconVariant: "solid-navy" as const,
+  },
+  {
+    Icon: IconShield,
+    title: "Travel Insurance",
+    slug: "travel-insurance",
+    image: "/Travel Insurance.jpeg",
+    imagePosition: "center",
+    description:
+      "Whether travelling within Canada or abroad, Sharan finds the right travel insurance plan to protect you from medical emergencies, trip cancellations, and unexpected costs.",
+    features: ["Emergency medical coverage", "Trip cancellation & interruption", "Baggage loss & delay", "24/7 worldwide assistance"],
+    iconVariant: "solid-red" as const,
   },
 ];
 

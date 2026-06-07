@@ -80,10 +80,10 @@ export default function AboutPage() {
                 The Person Behind Your Policy
               </h2>
               <p className="text-mid-gray leading-relaxed text-base">
-                With over 8 years in the financial services sector, Sharan Kaur understands that insurance isn't just about premium costs — it's about reliable protection when life goes sideways. Born and raised in Ontario, she understands the local driving risks, housing market regulations, and business challenges specific to the Mississauga and Peel regions.
+                I have been working in the insurance industry for almost 8 years, and I genuinely love what I do. Coming from a financial background, I understand the importance of personal finances. Throughout my career, I have participated in industry seminars, webinars, and conferences, proudly sharing my knowledge and expertise to help elevate the standards of the entire insurance sector.
               </p>
               <p className="text-mid-gray leading-relaxed text-base">
-                Working under the Billyard Insurance Group (BIG) banner, Sharan has the backing of one of Canada's fastest-growing brokerages. This gives her direct access to over 30 insurance carriers, ensuring she can secure the absolute best rate-to-coverage ratio for her clients.
+                I am well-versed in various types of insurance, including home and property, casualty, and commercial insurance. I aim to provide custom coverage that aligns perfectly with my client's unique needs and budget. If you're looking for insurance solutions to your specific needs or seeking expert advice on risk management, I'd be delighted to help. Let's connect and embark on a journey to secure your future together.
               </p>
             </div>
 

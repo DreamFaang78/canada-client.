@@ -161,6 +161,18 @@ export default function Navbar() {
                 (647) 501-8013
               </a>
               <div className={`w-px h-4 ${isScrolled || !isHome ? "bg-gray-300" : "bg-white/20"}`} />
+              <a
+                href="https://selfserve.thebig.ca/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`text-xs font-medium px-3 py-2 rounded-lg transition-all ${
+                  isScrolled || !isHome
+                    ? "text-mid-gray hover:text-big-dark hover:bg-gray-100"
+                    : "text-white/60 hover:text-white hover:bg-white/10"
+                }`}
+              >
+                Client Login
+              </a>
               <Link
                 href="/admin"
                 title="Admin Portal"
@@ -294,6 +306,14 @@ export default function Navbar() {
                 <IconDashboard size={14} className="text-mid-gray" />
                 Admin Portal
               </Link>
+              <a
+                href="https://selfserve.thebig.ca/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 px-6 py-2.5 text-mid-gray text-xs font-medium hover:text-big-red transition-colors"
+              >
+                Client Login
+              </a>
             </div>
           </motion.div>
         )}

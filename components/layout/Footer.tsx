@@ -57,10 +57,13 @@ export default function Footer() {
                 className="h-12 w-auto object-contain shrink-0"
               />
             </Link>
-            <p className="text-sm text-white/60 leading-relaxed mb-6">
+            <p className="text-sm text-white/60 leading-relaxed mb-2">
               Sharan Kaur is a licensed RIBO insurance broker serving
               Mississauga and the Greater Toronto Area with personalized
               insurance solutions.
+            </p>
+            <p className="text-sm text-white/60 leading-relaxed mb-6">
+              Member of Billyard Insurance Group · Mississauga West
             </p>
             <div className="flex gap-3">
               <a
@@ -157,15 +160,16 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-3 text-sm text-white/70">
                 <IconMapPin size={14} variant="bare" className="mt-0.5 shrink-0 text-big-red" />
-                5770 Hurontario St, Suite 100
+                105D-135 Matheson Blvd West
                 <br />
-                Mississauga, ON L5R 3G5
+                Mississauga, ON L5R 3L1
               </li>
               <li className="flex items-start gap-3 text-sm text-white/70">
                 <IconClock size={14} variant="bare" className="mt-0.5 shrink-0 text-big-red" />
                 <div>
-                  <p>Mon–Fri: 9:00 AM – 5:00 PM</p>
-                  <p>Sat: 10:00 AM – 2:00 PM</p>
+                  <p>Mon–Fri: 9:00 AM – 6:00 PM</p>
+                  <p>Sat: 10:00 AM – 3:00 PM</p>
+                  <p>Sun: By appointment only</p>
                 </div>
               </li>
             </ul>

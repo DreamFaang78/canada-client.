@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { createClient } from "@/lib/supabase/client";
-import { Home, Car, Heart, Briefcase, ChevronRight, HelpCircle } from "lucide-react";
+import { Home, Car, Heart, Briefcase, Plane, ChevronRight, HelpCircle } from "lucide-react";
 import Link from "next/link";
 import QuoteButton from "@/components/ui/QuoteButton";
 
@@ -21,7 +21,8 @@ const iconMap: Record<string, any> = {
   Home: Home,
   Car: Car,
   Heart: Heart,
-  Briefcase: Briefcase
+  Briefcase: Briefcase,
+  Plane: Plane
 };
 
 const getServiceImageFallback = (slug: string) => {
@@ -34,6 +35,8 @@ const getServiceImageFallback = (slug: string) => {
       return "/Life Insurance.jpeg";
     case "business-insurance":
       return "/Business Insurance.jpeg";
+    case "travel-insurance":
+      return "/Travel Insurance.jpeg";
     default:
       return "";
   }
@@ -86,6 +89,18 @@ const FALLBACK_SERVICES: Service[] = [
     coverages: [
       { title: "Commercial General Liability", description: "Protection if a client is injured or property is damaged in connection with your business" },
       { title: "Commercial Property", description: "Coverage for your building, equipment, and inventory" }
+    ]
+  },
+  {
+    id: "5",
+    slug: "travel-insurance",
+    name: "Travel Insurance",
+    short_description: "Get the right coverage for every trip — protection for medical emergencies, cancellations, and more.",
+    icon_name: "Plane",
+    image_url: "/Travel Insurance.jpeg",
+    coverages: [
+      { title: "Emergency Medical Coverage", description: "Protection against unexpected medical costs while travelling within Canada or abroad" },
+      { title: "Trip Cancellation & Interruption", description: "Reimbursement for non-refundable costs if your trip is cancelled or cut short" }
     ]
   }
 ];

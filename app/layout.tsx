@@ -26,11 +26,11 @@ export const metadata: Metadata = {
   ),
   title: {
     default:
-      "Sharan Kaur — Insurance Broker in Mississauga | Home, Auto, Life & Business | Think BIG.",
+      "Sharan Kaur — Insurance Broker in Mississauga | Home, Auto, Life, Business & Travel | Think BIG.",
     template: "%s | Sharan Kaur Insurance",
   },
   description:
-    "Sharan Kaur is a licensed RIBO insurance broker with Billyard Insurance Group in Mississauga. Get personalized quotes for home, auto, life, and business insurance. Call today.",
+    "Sharan Kaur is a licensed RIBO insurance broker with Billyard Insurance Group in Mississauga. Get personalized quotes for home, auto, life, and business insurance. Call (647) 501-8013 today.",
   icons: {
     icon: "/favicon.png",
   },
@@ -96,10 +96,10 @@ const localBusinessJsonLd = {
       image: "https://thebig.ca/og-image.jpg",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "5770 Hurontario St, Suite 100",
+        streetAddress: "105D-135 Matheson Blvd West",
         addressLocality: "Mississauga",
         addressRegion: "ON",
-        postalCode: "L5R 3G5",
+        postalCode: "L5R 3L1",
         addressCountry: "CA",
       },
       geo: {
@@ -112,13 +112,13 @@ const localBusinessJsonLd = {
           "@type": "OpeningHoursSpecification",
           dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
           opens: "09:00",
-          closes: "17:00",
+          closes: "18:00",
         },
         {
           "@type": "OpeningHoursSpecification",
           dayOfWeek: "Saturday",
           opens: "10:00",
-          closes: "14:00",
+          closes: "15:00",
         },
       ],
       sameAs: [

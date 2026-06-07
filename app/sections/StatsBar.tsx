@@ -5,8 +5,8 @@ import { IconTrending } from "@/components/ui/BIGIcons";
 
 const stats = [
   { value: 500, suffix: "+", label: "Clients Protected", prefix: "" },
-  { value: 12, suffix: "+ Years", label: "Industry Experience", prefix: "" },
-  { value: 15, suffix: "+", label: "Carrier Partners", prefix: "" },
+  { value: 8, suffix: "+ Years", label: "Industry Experience", prefix: "" },
+  { value: 30, suffix: "+", label: "Carrier Partners", prefix: "" },
   { value: 98, suffix: "%", label: "Client Satisfaction", prefix: "" },
 ];
 

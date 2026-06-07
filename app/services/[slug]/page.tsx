@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { createClient } from "@/lib/supabase/client";
-import { Home, Car, Heart, Briefcase, ChevronLeft, ShieldCheck, CheckCircle2 } from "lucide-react";
+import { Home, Car, Heart, Briefcase, Plane, ChevronLeft, ShieldCheck, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 import QuoteButton from "@/components/ui/QuoteButton";
 
@@ -30,6 +30,8 @@ const getServiceImageFallback = (slug: string) => {
       return "/Life Insurance.jpeg";
     case "business-insurance":
       return "/Business Insurance.jpeg";
+    case "travel-insurance":
+      return "/Travel Insurance.jpeg";
     default:
       return "";
   }
@@ -39,7 +41,8 @@ const iconMap: Record<string, any> = {
   Home: Home,
   Car: Car,
   Heart: Heart,
-  Briefcase: Briefcase
+  Briefcase: Briefcase,
+  Plane: Plane
 };
 
 const FALLBACK_SERVICE_DETAILS: Record<string, ServiceDetail> = {
@@ -105,6 +108,20 @@ const FALLBACK_SERVICE_DETAILS: Record<string, ServiceDetail> = {
       { title: "Professional Liability (E&O)", description: "Essential for consultants, contractors, and professionals against claims of negligence" },
       { title: "Commercial Auto", description: "Vehicle insurance for company cars, delivery vans, or fleets" },
       { title: "Cyber Liability", description: "Protection against data breaches and cyber attacks — increasingly important for all businesses" }
+    ]
+  },
+  "travel-insurance": {
+    slug: "travel-insurance",
+    name: "Travel Insurance",
+    short_description: "Get the right coverage for every trip — protection for medical emergencies, cancellations, and more.",
+    long_description: "Whether travelling within Canada or abroad, Sharan finds the right travel insurance plan to protect you from medical emergencies, trip cancellations, and unexpected costs. Don't let an unexpected event ruin your trip — get covered before you go.",
+    icon_name: "Plane",
+    image_url: "/Travel Insurance.jpeg",
+    coverages: [
+      { title: "Emergency Medical Coverage", description: "Protection against unexpected medical costs while travelling within Canada or abroad" },
+      { title: "Trip Cancellation & Interruption", description: "Reimbursement for non-refundable costs if your trip is cancelled or cut short" },
+      { title: "Baggage Loss & Delay", description: "Coverage for lost, stolen, or delayed luggage and personal belongings" },
+      { title: "24/7 Worldwide Assistance", description: "Round-the-clock emergency support no matter where your travels take you" }
     ]
   }
 };

@@ -24,6 +24,22 @@ const FALLBACK_TESTIMONIALS: Testimonial[] = [
     source: "google"
   },
   {
+    id: "5",
+    client_name: "Harjot S.",
+    service_type: "auto",
+    rating: 5,
+    review_text: "Sharan made switching my auto insurance completely stress-free. She found me a better rate with more coverage in under 20 minutes. I wish I had contacted her years ago.",
+    source: "google"
+  },
+  {
+    id: "6",
+    client_name: "Meena R.",
+    service_type: "home_auto",
+    rating: 5,
+    review_text: "Extremely knowledgeable and patient. Sharan explained every detail of my policy in plain language and bundled my home and auto to save me over $400 a year. Highly recommend her to anyone in Mississauga.",
+    source: "google"
+  },
+  {
     id: "2",
     client_name: "David K.",
     service_type: "auto",
@@ -54,6 +70,7 @@ const serviceLabels: Record<string, string> = {
   auto: "Auto Insurance",
   life: "Life Insurance",
   business: "Business Insurance",
+  home_auto: "Home & Auto Bundle",
   general: "General"
 };
 
