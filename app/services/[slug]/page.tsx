@@ -4,8 +4,9 @@ import { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { createClient } from "@/lib/supabase/client";
-import { Home, Car, Heart, Briefcase, ChevronLeft, ShieldCheck, CheckCircle2 } from "lucide-react";
+import { Home, Car, Heart, Briefcase, Plane, ChevronLeft, ShieldCheck, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import QuoteButton from "@/components/ui/QuoteButton";
 
 interface ServiceDetail {
@@ -30,6 +31,9 @@ const getServiceImageFallback = (slug: string) => {
       return "/Life Insurance.jpeg";
     case "business-insurance":
       return "/Business Insurance.jpeg";
+    case "travel-insurance":
+      // TODO: Replace with "Travel Insurance.jpeg" once the asset is added to /public
+      return "/Business Insurance.jpeg";
     default:
       return "";
   }
@@ -39,7 +43,8 @@ const iconMap: Record<string, any> = {
   Home: Home,
   Car: Car,
   Heart: Heart,
-  Briefcase: Briefcase
+  Briefcase: Briefcase,
+  Plane: Plane
 };
 
 const FALLBACK_SERVICE_DETAILS: Record<string, ServiceDetail> = {
@@ -105,6 +110,21 @@ const FALLBACK_SERVICE_DETAILS: Record<string, ServiceDetail> = {
       { title: "Professional Liability (E&O)", description: "Essential for consultants, contractors, and professionals against claims of negligence" },
       { title: "Commercial Auto", description: "Vehicle insurance for company cars, delivery vans, or fleets" },
       { title: "Cyber Liability", description: "Protection against data breaches and cyber attacks — increasingly important for all businesses" }
+    ]
+  },
+  "travel-insurance": {
+    slug: "travel-insurance",
+    name: "Travel Insurance",
+    short_description: "Get the right coverage for every trip — at home or abroad.",
+    long_description: "Whether travelling within Canada or abroad, Sharan finds the right travel insurance plan to protect you from medical emergencies, trip cancellations, and unexpected costs. Don't let an unplanned event derail your trip — get covered before you go.",
+    icon_name: "Plane",
+    // TODO: Replace with "Travel Insurance.jpeg" once the asset is added to /public
+    image_url: "/Business Insurance.jpeg",
+    coverages: [
+      { title: "Emergency Medical Coverage", description: "Protection against unexpected medical costs while travelling outside your home province or country" },
+      { title: "Trip Cancellation & Interruption", description: "Reimbursement for non-refundable costs if your trip is cancelled or cut short" },
+      { title: "Baggage Loss & Delay", description: "Coverage for lost, stolen, or delayed luggage and personal items" },
+      { title: "24/7 Worldwide Assistance", description: "Round-the-clock support wherever your travels take you" }
     ]
   }
 };
@@ -205,10 +225,13 @@ export default function ServiceDetailPage() {
           <div className="lg:col-span-8 space-y-10">
             {/* Service Cover Image */}
             <div className="relative h-[250px] sm:h-[350px] w-full rounded-3xl overflow-hidden shadow-lg border border-gray-150 shrink-0">
-              <img
+              <Image
                 src={service.image_url || getServiceImageFallback(service.slug)}
                 alt={service.name}
-                className="w-full h-full object-cover"
+                fill
+                priority
+                sizes="(max-width: 768px) 100vw, 800px"
+                className="object-cover"
               />
             </div>
 
@@ -291,6 +314,13 @@ export default function ServiceDetailPage() {
                   Call: 647.501.8013
                 </a>
               </div>
+              <p className="mt-5 text-xs text-mid-gray text-center">
+                See what clients say about working with Sharan in our{" "}
+                <Link href="/testimonials" className="text-big-red font-semibold hover:underline">
+                  testimonials
+                </Link>
+                .
+              </p>
             </div>
 
             {/* Direct Broker Widget */}

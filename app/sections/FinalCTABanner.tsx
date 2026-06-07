@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import QuoteButton from "@/components/ui/QuoteButton";
 import { IconShieldCheck, IconPhone, IconZap } from "@/components/ui/BIGIcons";
 
@@ -9,10 +10,13 @@ export default function FinalCTABanner() {
     <section className="relative py-20 md:py-28 overflow-hidden bg-big-dark">
       {/* Background Image */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        <img
+        {/* TODO: Compress to WebP <300KB in /public before deploy */}
+        <Image
           src="/Quote CTA Section.jpeg"
           alt="Contact Sharan"
-          className="w-full h-full object-cover opacity-40 mix-blend-overlay"
+          fill
+          sizes="100vw"
+          className="object-cover opacity-40 mix-blend-overlay"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-big-dark/95 via-big-dark/80 to-[#0F3460]/90" />
       </div>

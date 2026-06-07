@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -69,9 +70,12 @@ export default function Navbar() {
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 group">
-              <img
+              <Image
                 src="/Logo (2).png"
                 alt="Sharan Kaur Insurance Logo"
+                width={160}
+                height={48}
+                priority
                 className="h-10 sm:h-12 w-auto object-contain group-hover:scale-105 transition-transform shrink-0"
               />
               <div className="hidden sm:flex flex-col leading-tight">
@@ -173,6 +177,18 @@ export default function Navbar() {
                 <IconDashboard size={14} className={isScrolled || !isHome ? "text-mid-gray" : "text-white/60"} />
                 Admin
               </Link>
+              <a
+                href="https://selfserve.thebig.ca/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`text-xs font-medium px-3 py-2 rounded-lg transition-all ${
+                  isScrolled || !isHome
+                    ? "text-mid-gray hover:text-big-dark hover:bg-gray-100"
+                    : "text-white/60 hover:text-white hover:bg-white/10"
+                }`}
+              >
+                Client Login
+              </a>
               <Link
                 href="/get-a-quote"
                 className="bg-big-red hover:bg-deep-red text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-all hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0"
@@ -294,6 +310,14 @@ export default function Navbar() {
                 <IconDashboard size={14} className="text-mid-gray" />
                 Admin Portal
               </Link>
+              <a
+                href="https://selfserve.thebig.ca/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 px-6 py-2.5 text-mid-gray text-xs font-medium hover:text-charcoal transition-colors"
+              >
+                Client Login
+              </a>
             </div>
           </motion.div>
         )}

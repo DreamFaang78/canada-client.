@@ -2,7 +2,8 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { IconHome, IconCar, IconHeart, IconBuilding, IconArrowRight } from "@/components/ui/BIGIcons";
+import Image from "next/image";
+import { IconHome, IconCar, IconHeart, IconBuilding, IconShield, IconArrowRight } from "@/components/ui/BIGIcons";
 
 const services = [
   {
@@ -48,6 +49,18 @@ const services = [
       "Protect your business with commercial property, liability, and specialty coverage for Ontario businesses.",
     features: ["Commercial property", "General liability", "Professional liability", "Business interruption"],
     iconVariant: "solid-navy" as const,
+  },
+  {
+    Icon: IconShield,
+    title: "Travel Insurance",
+    slug: "travel-insurance",
+    // TODO: Replace with a dedicated photo — placeholder duplicates the Business Insurance image until "Travel Insurance.jpeg" is added to /public
+    image: "/Business Insurance.jpeg",
+    imagePosition: "center 15%",
+    description:
+      "Whether travelling within Canada or abroad, Sharan finds the right travel insurance plan to protect you from medical emergencies, trip cancellations, and unexpected costs.",
+    features: ["Emergency medical coverage", "Trip cancellation & interruption", "Baggage loss & delay", "24/7 worldwide assistance"],
+    iconVariant: "solid-red" as const,
   },
 ];
 
@@ -109,10 +122,13 @@ export default function ServicesGrid() {
                 <div className="bg-white rounded-3xl overflow-hidden border border-gray-100 hover:border-transparent hover:shadow-2xl transition-all duration-300 h-full flex flex-col">
                   {/* Image Header with float icon */}
                   <div className="relative h-64 w-full overflow-hidden bg-gray-100 shrink-0">
-                    <img
+                    {/* TODO: Compress to WebP <300KB in /public before deploy */}
+                    <Image
                       src={service.image}
                       alt={service.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 500px"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
                       style={{ objectPosition: service.imagePosition }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />

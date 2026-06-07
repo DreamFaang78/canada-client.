@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import {
   IconStar, IconUsers, IconAward, IconCheck, IconPhone, IconArrowRight,
   IconHome, IconCar, IconHeart, IconBuilding
@@ -11,8 +12,8 @@ import AnimatedCounter from "@/components/ui/AnimatedCounter";
 const trustBadges = [
   { Icon: IconStar, label: "Google Rating", value: "4.9", suffix: "/5" },
   { Icon: IconUsers, label: "Clients Served", value: 500, suffix: "+" },
-  { Icon: IconAward, label: "Years Experience", value: 12, suffix: "+" },
-  { Icon: IconCheck, label: "Carriers Partnered", value: 15, suffix: "+" },
+  { Icon: IconAward, label: "Years Experience", value: 8, suffix: "+" },
+  { Icon: IconCheck, label: "Carriers Partnered", value: 30, suffix: "+" },
 ];
 
 export default function HeroSection() {
@@ -133,10 +134,14 @@ export default function HeroSection() {
             >
               <div className="relative mx-auto max-w-sm overflow-visible">
                 <div className="aspect-[3/4] rounded-2xl overflow-hidden border border-white/20 shadow-2xl relative">
-                  <img
+                  {/* TODO: Compress to WebP <300KB in /public before deploy */}
+                  <Image
                     src="/homepage.jpeg"
                     alt="Sharan Kaur - Insurance Broker"
-                    className="w-full h-full object-cover"
+                    fill
+                    priority
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                    className="object-cover"
                   />
                 </div>
                 {/* Floating stat cards */}

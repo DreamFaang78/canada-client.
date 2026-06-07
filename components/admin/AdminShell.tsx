@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { createClient } from "@/lib/supabase/client";
 import {
@@ -104,9 +105,9 @@ export default function AdminShell({ children }: AdminShellProps) {
 
         {/* Profile Card */}
         <div className="p-6 border-b border-white/5 flex items-center gap-3">
-          <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center shrink-0 border border-white/10">
+          <div className="relative w-10 h-10 bg-white/10 rounded-full flex items-center justify-center shrink-0 border border-white/10 overflow-hidden">
             {adminUser?.avatarUrl ? (
-              <img src={adminUser.avatarUrl} alt="avatar" className="w-full h-full object-cover rounded-full" />
+              <Image src={adminUser.avatarUrl} alt="avatar" fill sizes="40px" className="object-cover rounded-full" />
             ) : (
               <User className="w-5 h-5 text-gray-300" />
             )}

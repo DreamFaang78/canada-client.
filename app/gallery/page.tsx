@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { createClient } from "@/lib/supabase/client";
+import NextImage from "next/image";
 import { X, Image as ImageIcon, Building, Users, Calendar } from "lucide-react";
 
 interface GalleryItem {
@@ -168,11 +169,12 @@ export default function GalleryPage() {
                   className="bg-white rounded-3xl overflow-hidden border border-gray-150 shadow-sm hover:shadow-xl hover:border-big-red/10 transition-all group cursor-pointer flex flex-col justify-between h-96"
                 >
                   <div className="relative overflow-hidden aspect-[4/3] bg-gray-100 shrink-0">
-                    <img
+                    <NextImage
                       src={item.image_url}
                       alt={item.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      loading="lazy"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                       <span className="bg-white/95 text-big-dark text-xs font-poppins font-bold px-4 py-2 rounded-xl shadow-md">
@@ -229,11 +231,13 @@ export default function GalleryPage() {
               onClick={(e) => e.stopPropagation()}
               className="max-w-4xl w-full bg-white rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row"
             >
-              <div className="md:w-3/5 bg-gray-950 aspect-[4/3] md:aspect-auto flex items-center">
-                <img
+              <div className="md:w-3/5 bg-gray-950 aspect-[4/3] md:aspect-auto flex items-center relative min-h-[300px]">
+                <NextImage
                   src={activePhoto.image_url}
                   alt={activePhoto.title}
-                  className="w-full h-full object-cover max-h-[80vh]"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 60vw"
+                  className="object-cover max-h-[80vh]"
                 />
               </div>
               <div className="md:w-2/5 p-8 sm:p-10 flex flex-col justify-between bg-white text-big-dark">

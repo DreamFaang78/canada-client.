@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   IconShield, IconPhone, IconMail, IconMapPin, IconClock,
 } from "@/components/ui/BIGIcons";
@@ -31,6 +32,7 @@ const serviceLinks = [
   { label: "Auto Insurance", href: "/services/auto-insurance" },
   { label: "Life Insurance", href: "/services/life-insurance" },
   { label: "Business Insurance", href: "/services/business-insurance" },
+  { label: "Travel Insurance", href: "/services/travel-insurance" },
 ];
 
 const quickLinks = [
@@ -51,16 +53,21 @@ export default function Footer() {
           {/* Brand column */}
           <div>
             <Link href="/" className="flex items-center mb-5">
-              <img
+              <Image
                 src="/Logo (2).png"
                 alt="Sharan Kaur Insurance Logo"
+                width={160}
+                height={48}
                 className="h-12 w-auto object-contain shrink-0"
               />
             </Link>
-            <p className="text-sm text-white/60 leading-relaxed mb-6">
+            <p className="text-sm text-white/60 leading-relaxed mb-2">
               Sharan Kaur is a licensed RIBO insurance broker serving
               Mississauga and the Greater Toronto Area with personalized
               insurance solutions.
+            </p>
+            <p className="text-sm text-white/60 leading-relaxed mb-6">
+              Member of Billyard Insurance Group · Mississauga West
             </p>
             <div className="flex gap-3">
               <a
@@ -157,15 +164,16 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-3 text-sm text-white/70">
                 <IconMapPin size={14} variant="bare" className="mt-0.5 shrink-0 text-big-red" />
-                5770 Hurontario St, Suite 100
+                105D-135 Matheson Blvd West
                 <br />
-                Mississauga, ON L5R 3G5
+                Mississauga, ON L5R 3L1
               </li>
               <li className="flex items-start gap-3 text-sm text-white/70">
                 <IconClock size={14} variant="bare" className="mt-0.5 shrink-0 text-big-red" />
                 <div>
-                  <p>Mon–Fri: 9:00 AM – 5:00 PM</p>
-                  <p>Sat: 10:00 AM – 2:00 PM</p>
+                  <p>Mon–Fri: 9:00 AM – 6:00 PM</p>
+                  <p>Saturday: 10:00 AM – 3:00 PM</p>
+                  <p>Sunday: By appointment only</p>
                 </div>
               </li>
             </ul>
