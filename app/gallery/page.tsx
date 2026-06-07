@@ -53,7 +53,7 @@ const FALLBACK_ITEMS: GalleryItem[] = [
     id: "6",
     title: "Business Representation",
     description: "Representing Billyard Insurance Group (BIG) with modern commercial and personal insurance branding.",
-    image_url: "/Business Card Mockup.jpeg",
+    image_url: "/Coverage card.jpeg",
     category: "events"
   }
 ];

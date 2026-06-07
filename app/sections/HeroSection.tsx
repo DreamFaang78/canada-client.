@@ -134,7 +134,7 @@ export default function HeroSection() {
               <div className="relative mx-auto max-w-sm overflow-visible">
                 <div className="aspect-[3/4] rounded-2xl overflow-hidden border border-white/20 shadow-2xl relative">
                   <img
-                    src="/Main_Picyure.jpeg"
+                    src="/homepage.jpeg"
                     alt="Sharan Kaur - Insurance Broker"
                     className="w-full h-full object-cover"
                   />

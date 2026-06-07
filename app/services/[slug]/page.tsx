@@ -23,11 +23,11 @@ interface ServiceDetail {
 const getServiceImageFallback = (slug: string) => {
   switch (slug) {
     case "home-insurance":
-      return "/Home Insurance.jpeg";
+      return "/Home Insurance New.png";
     case "auto-insurance":
       return "/Auto Insurance.jpeg";
     case "life-insurance":
-      return "/Consultation With Clients.jpeg";
+      return "/Life Insurance.jpeg";
     case "business-insurance":
       return "/Business Insurance.jpeg";
     default:
@@ -49,7 +49,7 @@ const FALLBACK_SERVICE_DETAILS: Record<string, ServiceDetail> = {
     short_description: "Protect your biggest investment with comprehensive home coverage tailored for Mississauga homeowners.",
     long_description: "Your home is likely your most valuable asset. Sharan compares 30+ insurers to find the coverage that actually fits — whether you own a detached home, condo, or rental property in Mississauga. We go beyond the basics to make sure you're protected when it matters most.",
     icon_name: "Home",
-    image_url: "/Home Insurance.jpeg",
+    image_url: "/Home Insurance New.png",
     coverages: [
       { title: "Dwelling Coverage", description: "Rebuilding costs if your home is damaged by fire, storm, or other covered events" },
       { title: "Personal Property", description: "Replacement of furniture, electronics, clothing, and valuables" },
@@ -81,7 +81,7 @@ const FALLBACK_SERVICE_DETAILS: Record<string, ServiceDetail> = {
     short_description: "Protect your family's financial future with the right life insurance — explained simply, without the pressure.",
     long_description: "Life insurance is one of the most important financial decisions you'll make for your family — and one of the most misunderstood. Sharan takes the time to explain your options in plain language and finds coverage that fits your life stage, income, and goals.",
     icon_name: "Heart",
-    image_url: "/Consultation With Clients.jpeg",
+    image_url: "/Life Insurance.jpeg",
     coverages: [
       { title: "Term Life Insurance", description: "Affordable coverage for a set period — ideal for young families and mortgage protection" },
       { title: "Whole Life Insurance", description: "Permanent coverage with a cash value component that grows over time" },

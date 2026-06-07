@@ -1,0 +1,72 @@
+
+<style>
+  .stage{position:relative;width:460px;height:460px;margin:0 auto;border-radius:40px;overflow:hidden;flex-shrink:0}
+  .gp{position:absolute;left:60px;top:60px;width:340px;height:340px;border-radius:32px;background:rgba(255,255,255,.38);border:1.5px solid rgba(255,255,255,.78);box-shadow:0 48px 96px rgba(10,16,52,.4),0 14px 32px rgba(10,16,52,.2),inset 0 2px 0 rgba(255,255,255,.95),inset 0 -1px 0 rgba(255,255,255,.18)}
+  .gleam{position:absolute;top:0;left:0;right:0;height:72px;border-radius:32px 32px 0 0;background:linear-gradient(180deg,rgba(255,255,255,.3) 0%,transparent 100%);pointer-events:none}
+  .glo{position:absolute;border-radius:50%;pointer-events:none}
+</style>
+
+<div style="display:flex;flex-direction:column;align-items:center;gap:8px;padding:20px 0">
+  <div class="stage" style="background:#EAE3DC">
+    <div class="glo" style="width:330px;height:330px;background:radial-gradient(circle,rgba(148,80,210,.27) 0%,transparent 68%);top:48%;left:50%;transform:translate(-50%,-51%)"></div>
+    <div class="glo" style="width:360px;height:160px;background:radial-gradient(ellipse,rgba(10,16,52,.16) 0%,transparent 70%);bottom:-10px;left:50%;transform:translateX(-50%)"></div>
+    <div class="gp">
+      <div class="gleam"></div>
+      <svg width="100%" height="100%" viewBox="0 0 340 340">
+        <defs>
+          <clipPath id="lp-c">
+            <path d="M170 58C213 58 254 95 254 141C254 187 218 215 170 258C122 215 86 187 86 141C86 95 127 58 170 58Z"/>
+          </clipPath>
+        </defs>
+
+        <circle cx="170" cy="140" r="98" fill="none" stroke="rgba(148,80,210,.13)" stroke-width="14"/>
+        <circle cx="170" cy="140" r="112" fill="none" stroke="rgba(148,80,210,.06)" stroke-width="8"/>
+
+        <path d="M170 58C213 58 254 95 254 141C254 187 218 215 170 258C122 215 86 187 86 141C86 95 127 58 170 58Z" fill="rgba(255,255,255,.46)"/>
+
+        <g clip-path="url(#lp-c)">
+          <rect x="86" y="58" width="168" height="94" fill="rgba(214,205,232,.4)"/>
+          <rect x="104" y="180" width="132" height="2.5" rx="1" fill="#0C1A3E" opacity=".17"/>
+          <rect x="118" y="148" width="12" height="32" rx="2" fill="#0C1A3E" opacity=".12"/>
+          <rect x="132" y="130" width="15" height="50" rx="2" fill="#0C1A3E" opacity=".18"/>
+          <rect x="149" y="111" width="17" height="69" rx="2" fill="#0C1A3E" opacity=".25"/>
+          <rect x="168" y="122" width="15" height="58" rx="2" fill="#0C1A3E" opacity=".19"/>
+          <rect x="185" y="140" width="13" height="40" rx="2" fill="#0C1A3E" opacity=".14"/>
+          <rect x="200" y="153" width="11" height="27" rx="2" fill="#0C1A3E" opacity=".1"/>
+          <rect x="153" y="117" width="4" height="4" rx="1" fill="#0C1A3E" opacity=".27"/>
+          <rect x="160" y="117" width="4" height="4" rx="1" fill="#0C1A3E" opacity=".27"/>
+          <rect x="153" y="126" width="4" height="4" rx="1" fill="#0C1A3E" opacity=".27"/>
+          <rect x="160" y="126" width="4" height="4" rx="1" fill="#0C1A3E" opacity=".27"/>
+          <rect x="153" y="135" width="4" height="4" rx="1" fill="#0C1A3E" opacity=".27"/>
+          <rect x="160" y="135" width="4" height="4" rx="1" fill="#0C1A3E" opacity=".27"/>
+          <rect x="172" y="128" width="4" height="4" rx="1" fill="#0C1A3E" opacity=".24"/>
+          <rect x="179" y="128" width="4" height="4" rx="1" fill="#0C1A3E" opacity=".24"/>
+          <rect x="172" y="137" width="4" height="4" rx="1" fill="#0C1A3E" opacity=".24"/>
+          <rect x="179" y="137" width="4" height="4" rx="1" fill="#0C1A3E" opacity=".24"/>
+          <circle cx="159" cy="107" r="5.5" fill="#C63526" opacity=".48"/>
+          <circle cx="159" cy="107" r="2.5" fill="#C63526" opacity=".38"/>
+        </g>
+
+        <path d="M170 65C198 65 236 88 244 122C234 96 220 76 200 68C192 63 180 60 170 65Z" fill="rgba(255,255,255,.52)"/>
+        <path d="M170 58C213 58 254 95 254 141C254 187 218 215 170 258C122 215 86 187 86 141C86 95 127 58 170 58Z" fill="none" stroke="#0C1A3E" stroke-width="5.5"/>
+
+        <circle cx="170" cy="141" r="88" fill="none" stroke="#C63526" stroke-width="1.5" opacity=".18"/>
+        <circle cx="170" cy="254" r="8.5" fill="#C63526"/>
+        <circle cx="170" cy="254" r="3.5" fill="rgba(255,255,255,.62)"/>
+
+        <circle cx="122" cy="296" r="11" fill="#0C1A3E" opacity=".5"/>
+        <path d="M111 320Q122 309 133 320" fill="none" stroke="#0C1A3E" stroke-width="3.5" stroke-linecap="round" opacity=".44"/>
+        <circle cx="170" cy="290" r="13" fill="#0C1A3E" opacity=".61"/>
+        <path d="M156 316Q170 305 184 316" fill="none" stroke="#0C1A3E" stroke-width="4" stroke-linecap="round" opacity=".52"/>
+        <circle cx="218" cy="296" r="11" fill="#0C1A3E" opacity=".5"/>
+        <path d="M207 320Q218 309 229 320" fill="none" stroke="#0C1A3E" stroke-width="3.5" stroke-linecap="round" opacity=".44"/>
+
+        <line x1="134" y1="299" x2="155" y2="293" stroke="rgba(148,80,210,.42)" stroke-width="1.5" stroke-dasharray="3 3"/>
+        <line x1="185" y1="293" x2="206" y2="299" stroke="rgba(148,80,210,.42)" stroke-width="1.5" stroke-dasharray="3 3"/>
+        <circle cx="100" cy="316" r="3" fill="rgba(148,80,210,.3)"/>
+        <circle cx="240" cy="316" r="3" fill="rgba(148,80,210,.3)"/>
+      </svg>
+    </div>
+  </div>
+  <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#7a7570">Local Expert</div>
+</div>

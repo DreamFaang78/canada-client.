@@ -9,8 +9,8 @@ const services = [
     Icon: IconHome,
     title: "Home Insurance",
     slug: "home-insurance",
-    image: "/Home Insurance.jpeg",
-    imagePosition: "center 25%",
+    image: "/Home Insurance New.png",
+    imagePosition: "center",
     description:
       "Protect your biggest investment with comprehensive home insurance coverage including dwelling, contents, and liability.",
     features: ["Dwelling protection", "Personal property", "Liability coverage", "Additional living expenses"],
@@ -31,7 +31,7 @@ const services = [
     Icon: IconHeart,
     title: "Life Insurance",
     slug: "life-insurance",
-    image: "/Consultation With Clients.jpeg",
+    image: "/Life Insurance.jpeg",
     imagePosition: "center 20%",
     description:
       "Secure your family's financial future with term and permanent life insurance solutions tailored to your needs.",

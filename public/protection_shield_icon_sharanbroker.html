@@ -1,0 +1,66 @@
+
+<style>
+  .stage{position:relative;width:460px;height:460px;margin:0 auto;border-radius:40px;overflow:hidden;flex-shrink:0}
+  .gp{position:absolute;left:60px;top:60px;width:340px;height:340px;border-radius:32px;background:rgba(255,255,255,.38);border:1.5px solid rgba(255,255,255,.78);box-shadow:0 48px 96px rgba(10,16,52,.4),0 14px 32px rgba(10,16,52,.2),inset 0 2px 0 rgba(255,255,255,.95),inset 0 -1px 0 rgba(255,255,255,.18)}
+  .gleam{position:absolute;top:0;left:0;right:0;height:72px;border-radius:32px 32px 0 0;background:linear-gradient(180deg,rgba(255,255,255,.3) 0%,transparent 100%);pointer-events:none}
+  .glo{position:absolute;border-radius:50%;pointer-events:none}
+</style>
+
+<div style="display:flex;flex-direction:column;align-items:center;gap:8px;padding:20px 0">
+  <div class="stage" style="background:#E5DFD5">
+    <div class="glo" style="width:300px;height:300px;background:radial-gradient(circle,rgba(198,53,38,.18) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%)"></div>
+    <div class="glo" style="width:360px;height:160px;background:radial-gradient(ellipse,rgba(10,16,52,.18) 0%,transparent 70%);bottom:-10px;left:50%;transform:translateX(-50%)"></div>
+    <div class="gp">
+      <div class="gleam"></div>
+      <svg width="100%" height="100%" viewBox="0 0 340 340">
+        <defs>
+          <clipPath id="sh-c">
+            <path d="M82 74L258 74C268 74 272 84 272 94L272 150C272 210 228 250 170 273C112 250 68 210 68 150L68 94C68 84 72 74 82 74Z"/>
+          </clipPath>
+          <linearGradient id="sh-rd" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="rgba(198,53,38,0)"/>
+            <stop offset="46%" stop-color="rgba(198,53,38,.44)"/>
+            <stop offset="100%" stop-color="rgba(198,53,38,.06)"/>
+          </linearGradient>
+          <linearGradient id="sh-nv" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#1B2D5E"/>
+            <stop offset="100%" stop-color="#0B1838"/>
+          </linearGradient>
+        </defs>
+
+        <path d="M85 81L258 81C270 81 277 92 277 104L277 156C277 218 232 260 170 282C108 260 63 218 63 156L63 104C63 92 70 81 85 81Z" fill="rgba(10,16,52,.24)"/>
+
+        <path d="M82 74L258 74C268 74 272 84 272 94L272 150C272 210 228 250 170 273C112 250 68 210 68 150L68 94C68 84 72 74 82 74Z" fill="url(#sh-nv)"/>
+
+        <path d="M82 74L258 74C268 74 272 84 272 94L272 150C272 210 228 250 170 273C112 250 68 210 68 150L68 94C68 84 72 74 82 74Z" fill="url(#sh-rd)"/>
+
+        <path d="M100 103L240 103C250 103 254 111 254 119L254 154C254 204 218 236 170 255C122 236 86 204 86 154L86 119C86 111 90 103 100 103Z" fill="none" stroke="rgba(255,255,255,.2)" stroke-width="2"/>
+
+        <path d="M118 130L222 130C230 130 233 136 233 142L233 154C233 186 208 208 170 222C132 208 107 186 107 154L107 142C107 136 110 130 118 130Z" fill="none" stroke="rgba(255,255,255,.12)" stroke-width="1.5"/>
+
+        <path d="M82 74L258 74C268 74 272 84 272 94L272 134L68 134L68 94C68 84 72 74 82 74Z" fill="rgba(255,255,255,.17)" clip-path="url(#sh-c)"/>
+
+        <path d="M68 168L272 168L272 189L68 189Z" fill="#C63526" opacity=".3" clip-path="url(#sh-c)"/>
+        <path d="M68 168L272 168" fill="none" stroke="rgba(198,53,38,.55)" stroke-width="1" clip-path="url(#sh-c)"/>
+        <path d="M68 189L272 189" fill="none" stroke="rgba(198,53,38,.35)" stroke-width="0.8" clip-path="url(#sh-c)"/>
+
+        <path d="M112 80C132 76 208 76 228 80" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="3" stroke-linecap="round"/>
+
+        <path d="M144 178L163 198L202 156" fill="none" stroke="rgba(255,255,255,.86)" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+        <path d="M82 74L258 74C268 74 272 84 272 94L272 150C272 210 228 250 170 273C112 250 68 210 68 150L68 94C68 84 72 74 82 74Z" fill="none" stroke="rgba(255,255,255,.28)" stroke-width="2"/>
+        <path d="M82 74L258 74C268 74 272 84 272 94L272 150C272 210 228 250 170 273C112 250 68 210 68 150L68 94C68 84 72 74 82 74Z" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="6"/>
+
+        <circle cx="170" cy="269" r="20" fill="#0C1A3E" stroke="rgba(255,255,255,.32)" stroke-width="1.5"/>
+        <circle cx="170" cy="269" r="20" fill="rgba(198,53,38,.42)"/>
+        <path d="M163 269L168 275L179 261" fill="none" stroke="rgba(255,255,255,.78)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+        <circle cx="275" cy="105" r="14" fill="rgba(255,255,255,.09)" stroke="rgba(255,255,255,.18)" stroke-width="1"/>
+        <path d="M270 105L274 109L281 100" fill="none" stroke="rgba(255,255,255,.4)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="65" cy="105" r="14" fill="rgba(255,255,255,.09)" stroke="rgba(255,255,255,.18)" stroke-width="1"/>
+        <path d="M60 105L64 109L71 100" fill="none" stroke="rgba(255,255,255,.4)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </div>
+  <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#7a7570">Protection Shield</div>
+</div>

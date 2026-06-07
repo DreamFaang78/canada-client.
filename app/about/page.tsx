@@ -56,7 +56,7 @@ export default function AboutPage() {
           <div className="lg:col-span-5 relative">
             <div className="aspect-[3/4] w-full max-w-md mx-auto rounded-3xl overflow-hidden shadow-2xl relative">
               <img
-                src="/Website About Section.jpeg"
+                src="/About  Consultation.jpeg"
                 alt="Sharan Kaur"
                 className="w-full h-full object-cover"
               />

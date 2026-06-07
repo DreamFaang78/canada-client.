@@ -7,6 +7,15 @@ import { IconShieldCheck, IconPhone, IconZap } from "@/components/ui/BIGIcons";
 export default function FinalCTABanner() {
   return (
     <section className="relative py-20 md:py-28 overflow-hidden bg-big-dark">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <img
+          src="/Quote CTA Section.jpeg"
+          alt="Contact Sharan"
+          className="w-full h-full object-cover opacity-40 mix-blend-overlay"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-big-dark/95 via-big-dark/80 to-[#0F3460]/90" />
+      </div>
       {/* Dynamic Background Gradients */}
       <div className="absolute inset-0 bg-gradient-to-br from-big-red/20 via-transparent to-black/80 z-0" />
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-big-red/10 rounded-full blur-3xl -z-10 translate-x-1/4 -translate-y-1/4" />

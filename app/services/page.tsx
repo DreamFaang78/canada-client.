@@ -27,11 +27,11 @@ const iconMap: Record<string, any> = {
 const getServiceImageFallback = (slug: string) => {
   switch (slug) {
     case "home-insurance":
-      return "/Home Insurance.jpeg";
+      return "/Home Insurance New.png";
     case "auto-insurance":
       return "/Auto Insurance.jpeg";
     case "life-insurance":
-      return "/Consultation With Clients.jpeg";
+      return "/Life Insurance.jpeg";
     case "business-insurance":
       return "/Business Insurance.jpeg";
     default:
@@ -46,7 +46,7 @@ const FALLBACK_SERVICES: Service[] = [
     name: "Home Insurance",
     short_description: "Protect your biggest investment with comprehensive home coverage tailored for Mississauga homeowners.",
     icon_name: "Home",
-    image_url: "/Home Insurance.jpeg",
+    image_url: "/Home Insurance New.png",
     coverages: [
       { title: "Dwelling Coverage", description: "Rebuilding costs if your home is damaged by fire, storm, or other covered events" },
       { title: "Personal Property", description: "Replacement of furniture, electronics, clothing, and valuables" }
@@ -70,7 +70,7 @@ const FALLBACK_SERVICES: Service[] = [
     name: "Life Insurance",
     short_description: "Protect your family's financial future with the right life insurance — explained simply, without the pressure.",
     icon_name: "Heart",
-    image_url: "/Consultation With Clients.jpeg",
+    image_url: "/Life Insurance.jpeg",
     coverages: [
       { title: "Term Life Insurance", description: "Affordable coverage for a set period — ideal for young families and mortgage protection" },
       { title: "Whole Life Insurance", description: "Permanent coverage with a cash value component that grows over time" }

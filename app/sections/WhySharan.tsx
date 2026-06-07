@@ -11,6 +11,7 @@ const differentiators = [
       "Unlike agents who work for a single insurer, Sharan works for YOU. As an independent RIBO-licensed broker, she shops across 30+ carriers to find the best coverage at the best price — with zero conflicts of interest.",
     variant: "solid-red" as const,
     stat: "30+ Carriers",
+    htmlIcon: "/protection_shield_icon_sharanbroker.html",
   },
   {
     Icon: IconClock,
@@ -27,6 +28,7 @@ const differentiators = [
       "Born and raised in the GTA, Sharan understands the local market deeply — from condo regulations to Ontario auto rules. She speaks your language and serves your community.",
     variant: "solid-red" as const,
     stat: "Local Expert",
+    htmlIcon: "/local_expert_icon_sharanbroker.html",
   },
   {
     Icon: IconTrending,
@@ -35,6 +37,7 @@ const differentiators = [
       "Life changes. Your insurance should too. Sharan proactively reviews your policies at renewal, checks for gaps, and ensures you're never paying for coverage you don't need.",
     variant: "solid-navy" as const,
     stat: "Annual Reviews",
+    htmlIcon: "/annual_review_icon_sharanbroker.html",
   },
 ];
 
@@ -88,10 +91,21 @@ export default function WhySharan() {
             >
               {/* Glassmorphism icon card */}
               <div className="md:w-2/5 shrink-0">
-                <div className="bg-gradient-to-br from-[#1A1A2E] to-[#0F3460] rounded-2xl p-10 flex flex-col items-center justify-center gap-4 h-48 border border-white/10 shadow-xl relative overflow-hidden">
+                <div className="bg-gradient-to-br from-[#1A1A2E] to-[#0F3460] rounded-2xl p-10 flex flex-col items-center justify-center gap-2 h-48 border border-white/10 shadow-xl relative overflow-hidden">
                   {/* Glow orb */}
                   <div className="absolute inset-0 bg-gradient-to-br from-big-red/20 via-transparent to-transparent pointer-events-none" />
-                  <item.Icon size={64} variant={item.variant} />
+                  {item.htmlIcon ? (
+                    <div className="relative w-[138px] h-[138px] shrink-0 mt-[-15px] mb-[-5px]">
+                      <iframe 
+                        src={item.htmlIcon} 
+                        className="w-[460px] h-[460px] origin-top-left scale-[0.3] pointer-events-none absolute top-0 left-0"
+                        style={{ border: 'none' }}
+                        scrolling="no"
+                      />
+                    </div>
+                  ) : (
+                    <item.Icon size={64} variant={item.variant} className="mb-2" />
+                  )}
                   <span className="font-poppins font-bold text-white text-lg relative z-10">
                     {item.stat}
                   </span>
