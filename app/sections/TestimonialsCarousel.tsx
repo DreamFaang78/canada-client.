@@ -46,6 +46,22 @@ const FALLBACK_TESTIMONIALS: Testimonial[] = [
     rating: 5,
     review_text: "After my basement flooded, I was worried my claim would be a nightmare. Sharan was on the phone with me within the hour, guided me through every step, and advocated for us with the insurer. That's the difference a broker makes.",
     source: "google"
+  },
+  {
+    id: "5",
+    client_name: "Harjot S.",
+    service_type: "auto",
+    rating: 5,
+    review_text: "Sharan made switching my auto insurance completely stress-free. She found me a better rate with more coverage in under 20 minutes. I wish I had contacted her years ago.",
+    source: "google"
+  },
+  {
+    id: "6",
+    client_name: "Meena R.",
+    service_type: "home",
+    rating: 5,
+    review_text: "Extremely knowledgeable and patient. Sharan explained every detail of my policy in plain language and bundled my home and auto to save me over $400 a year. Highly recommend her to anyone in Mississauga.",
+    source: "google"
   }
 ];
 

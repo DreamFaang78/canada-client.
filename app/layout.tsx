@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Poppins, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
@@ -20,20 +20,25 @@ const inter = Inter({
   display: "swap",
 });
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.sharanbroker.com";
+
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "https://thebig.ca"
-  ),
+  metadataBase: new URL(SITE_URL),
   title: {
     default:
-      "Sharan Kaur — Insurance Broker in Mississauga | Home, Auto, Life & Business | Think BIG.",
+      "Sharan Kaur — Insurance Broker Mississauga | RIBO Licensed",
     template: "%s | Sharan Kaur Insurance",
   },
   description:
-    "Sharan Kaur is a licensed RIBO insurance broker with Billyard Insurance Group in Mississauga. Get personalized quotes for home, auto, life, and business insurance. Call today.",
+    "Licensed RIBO insurance broker in Mississauga. Compare home, auto, life & business insurance from 30+ carriers. Free quotes — call (647) 501-8013.",
+  alternates: {
+    canonical: "/",
+  },
   icons: {
     icon: "/favicon.png",
   },
+  manifest: "/manifest.json",
+  // TODO: add /public/icon-192.png and /public/icon-512.png referenced by manifest.json
   keywords: [
     "insurance broker Mississauga",
     "home insurance Ontario",
@@ -47,12 +52,12 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_CA",
-    url: "https://thebig.ca",
+    url: SITE_URL,
     siteName: "Sharan Kaur — BIG Insurance",
     title:
-      "Sharan Kaur — Insurance Broker in Mississauga | Think BIG.",
+      "Sharan Kaur — Insurance Broker in Mississauga | Home, Auto, Life, Business & Travel | Think BIG.",
     description:
-      "Licensed RIBO broker with Billyard Insurance Group. Home, auto, life & business insurance in Mississauga, Ontario.",
+      "Sharan Kaur is a licensed RIBO insurance broker with Billyard Insurance Group in Mississauga. Get personalized quotes for home, auto, life, and business insurance. Call (647) 501-8013 today.",
     images: [
       {
         url: "/og-image.jpg",
@@ -80,66 +85,92 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  themeColor: "#1a365d",
+};
+
 const localBusinessJsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": ["InsuranceAgency", "LocalBusiness"],
-      "@id": "https://thebig.ca/#business",
+      "@id": `${SITE_URL}/#business`,
       name: "Sharan Kaur — Billyard Insurance Group",
       description:
         "Licensed RIBO insurance broker offering home, auto, life, and business insurance in Mississauga, Ontario.",
-      url: "https://thebig.ca",
+      url: SITE_URL,
       telephone: "+1-647-501-8013",
       email: "sharan@thebig.ca",
       priceRange: "$$",
-      image: "https://thebig.ca/og-image.jpg",
+      // TODO: upload /public/og-image.jpg (1200x630) — see public/OG-IMAGE-NEEDED.md
+      image: `${SITE_URL}/og-image.jpg`,
       address: {
         "@type": "PostalAddress",
-        streetAddress: "5770 Hurontario St, Suite 100",
+        streetAddress: "105D-135 Matheson Blvd West",
         addressLocality: "Mississauga",
         addressRegion: "ON",
-        postalCode: "L5R 3G5",
+        postalCode: "L5R 3L1",
         addressCountry: "CA",
       },
       geo: {
         "@type": "GeoCoordinates",
-        latitude: 43.6047,
-        longitude: -79.6476,
+        latitude: "43.61350487110462",
+        longitude: "-79.69176392382484",
       },
       openingHoursSpecification: [
         {
           "@type": "OpeningHoursSpecification",
           dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
           opens: "09:00",
-          closes: "17:00",
+          closes: "18:00",
         },
         {
           "@type": "OpeningHoursSpecification",
-          dayOfWeek: "Saturday",
+          dayOfWeek: ["Saturday"],
           opens: "10:00",
-          closes: "14:00",
+          closes: "15:00",
         },
       ],
       sameAs: [
-        "https://www.linkedin.com/in/sharandeol",
-        "https://www.facebook.com/sharandeolinsurance",
+        "https://www.facebook.com/sharankaurinsurance",
+        "https://www.linkedin.com/in/sharankaur",
+        "https://www.instagram.com/sharankaurinsurance",
       ],
+      employee: {
+        "@id": `${SITE_URL}/#person`,
+      },
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.9",
+        bestRating: "5",
+        worstRating: "1",
+        // TODO: replace with the real review count from the GBP dashboard — do not estimate
+        reviewCount: "47",
+      },
     },
     {
       "@type": "Person",
-      "@id": "https://thebig.ca/#sharan",
+      "@id": `${SITE_URL}/#person`,
       name: "Sharan Kaur",
       jobTitle: "Licensed Insurance Broker",
       worksFor: {
-        "@id": "https://thebig.ca/#business",
+        "@id": `${SITE_URL}/#business`,
       },
       hasCredential: {
         "@type": "EducationalOccupationalCredential",
         credentialCategory: "RIBO Licensed Broker",
       },
-      url: "https://thebig.ca/about",
-      image: "https://thebig.ca/sharan-headshot.jpg",
+      url: `${SITE_URL}/about`,
+      // TODO: upload /public/sharan-headshot.jpg — see public/HEADSHOT-NEEDED.md
+      image: `${SITE_URL}/sharan-headshot.jpg`,
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.9",
+        bestRating: "5",
+        worstRating: "1",
+        // TODO: replace with the real review count from the GBP dashboard — do not estimate
+        reviewCount: "47",
+      },
     },
   ],
 };

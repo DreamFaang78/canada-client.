@@ -3,7 +3,16 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Shield, Award, Users, CheckCircle } from "lucide-react";
+import Link from "next/link";
 import QuoteButton from "@/components/ui/QuoteButton";
+
+const serviceLinks = [
+  { label: "Home Insurance", href: "/services/home-insurance" },
+  { label: "Auto Insurance", href: "/services/auto-insurance" },
+  { label: "Life Insurance", href: "/services/life-insurance" },
+  { label: "Business Insurance", href: "/services/business-insurance" },
+  { label: "Travel Insurance", href: "/services/travel-insurance" },
+];
 
 const stats = [
   { label: "Years Experience", value: "8+" },
@@ -55,10 +64,13 @@ export default function AboutPage() {
           {/* Left Column: Image/Visual */}
           <div className="lg:col-span-5 relative">
             <div className="aspect-[3/4] w-full max-w-md mx-auto rounded-3xl overflow-hidden shadow-2xl relative">
-              <img
+              {/* TODO: Compress to WebP <300KB in /public before deploy */}
+              <Image
                 src="/About  Consultation.jpeg"
                 alt="Sharan Kaur"
-                className="w-full h-full object-cover"
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
+                className="object-cover"
               />
             </div>
             {/* Experience Badge */}
@@ -80,10 +92,10 @@ export default function AboutPage() {
                 The Person Behind Your Policy
               </h2>
               <p className="text-mid-gray leading-relaxed text-base">
-                With over 8 years in the financial services sector, Sharan Kaur understands that insurance isn't just about premium costs — it's about reliable protection when life goes sideways. Born and raised in Ontario, she understands the local driving risks, housing market regulations, and business challenges specific to the Mississauga and Peel regions.
+                I have been working in the insurance industry for almost 8 years, and I genuinely love what I do. Coming from a financial background, I understand the importance of personal finances. Throughout my career, I have participated in industry seminars, webinars, and conferences, proudly sharing my knowledge and expertise to help elevate the standards of the entire insurance sector.
               </p>
               <p className="text-mid-gray leading-relaxed text-base">
-                Working under the Billyard Insurance Group (BIG) banner, Sharan has the backing of one of Canada's fastest-growing brokerages. This gives her direct access to over 30 insurance carriers, ensuring she can secure the absolute best rate-to-coverage ratio for her clients.
+                I am well-versed in various types of insurance, including home and property, casualty, and commercial insurance. I aim to provide custom coverage that aligns perfectly with my client's unique needs and budget. If you're looking for insurance solutions to your specific needs or seeking expert advice on risk management, I'd be delighted to help. Let's connect and embark on a journey to secure your future together.
               </p>
             </div>
 
@@ -96,6 +108,22 @@ export default function AboutPage() {
                     <CheckCircle className="w-5 h-5 text-big-red shrink-0 mt-0.5" />
                     <span className="text-sm text-charcoal">{cred}</span>
                   </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Coverage Areas — internal cross-links */}
+            <div className="space-y-3 pt-2">
+              <h3 className="font-poppins font-bold text-xl text-big-dark">Coverage Sharan Offers</h3>
+              <div className="flex flex-wrap gap-2.5">
+                {serviceLinks.map((s) => (
+                  <Link
+                    key={s.href}
+                    href={s.href}
+                    className="px-4 py-2 rounded-xl border border-gray-200 text-sm text-charcoal hover:border-big-red hover:text-big-red transition-colors"
+                  >
+                    {s.label}
+                  </Link>
                 ))}
               </div>
             </div>

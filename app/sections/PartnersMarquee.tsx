@@ -12,7 +12,22 @@ const carriers = [
   { name: "Gore Mutual", logoText: "GORE" },
   { name: "Pembridge Insurance", logoText: "pembridge" },
   { name: "Chubb Insurance", logoText: "CHUBB" },
-  { name: "Zenith Insurance", logoText: "Zenith" }
+  { name: "Zenith Insurance", logoText: "Zenith" },
+  { name: "Definity", logoText: "Definity" },
+  { name: "Hagerty", logoText: "Hagerty" },
+  { name: "Portage Mutual Insurance", logoText: "Portage Mutual" },
+  { name: "iA Financial Group", logoText: "iA Financial" },
+  { name: "RBC Insurance", logoText: "RBC Insurance" },
+  { name: "Empire Life", logoText: "Empire Life" },
+  { name: "Great-West Life", logoText: "Great-West Life" },
+  { name: "Allianz", logoText: "Allianz" },
+  { name: "Equitable Life of Canada", logoText: "Equitable Life" },
+  { name: "Foresters Financial", logoText: "Foresters" },
+  { name: "Canada Protection Plan", logoText: "Canada Protection Plan" },
+  { name: "INGLE International", logoText: "INGLE International" },
+  { name: "SSQ Assurance", logoText: "SSQ Assurance" },
+  { name: "Tugo Travel Insurance", logoText: "TuGo" },
+  { name: "Coachman Insurance", logoText: "Coachman" }
 ];
 
 export default function PartnersMarquee() {

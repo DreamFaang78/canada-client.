@@ -29,7 +29,10 @@ export default function AnimatedCounter({
   const isInView = useInView(ref, { once: true, margin: "-50px" });
   const shouldReduceMotion = useReducedMotion();
   const count = useMotionValue(0);
-  const [displayValue, setDisplayValue] = useState(0);
+  // Initialize to `target` (not 0) so the server-rendered HTML contains the
+  // real number for crawlers; the count-up animation then runs client-side
+  // once the element scrolls into view.
+  const [displayValue, setDisplayValue] = useState(target);
 
   const rounded = useTransform(count, (v) => Math.round(v));
 
@@ -46,6 +49,7 @@ export default function AnimatedCounter({
       return;
     }
 
+    count.set(0);
     const controls = animate(count, target, {
       duration,
       ease: "easeOut",
@@ -55,7 +59,7 @@ export default function AnimatedCounter({
   }, [isInView, target, duration, shouldReduceMotion, count]);
 
   return (
-    <span ref={ref} className={className}>
+    <span ref={ref} className={className} suppressHydrationWarning>
       {prefix}
       {displayValue.toLocaleString()}
       {suffix}

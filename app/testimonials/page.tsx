@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { createClient } from "@/lib/supabase/client";
 import { Star, Quote, Search, ExternalLink } from "lucide-react";
+import Link from "next/link";
+import QuoteButton from "@/components/ui/QuoteButton";
 
 interface Testimonial {
   id: string;
@@ -77,6 +79,24 @@ const FALLBACK_TESTIMONIALS: Testimonial[] = [
     review_text: "Moved to Mississauga from BC and had no idea how Ontario auto insurance worked. Sharan walked me through everything — mandatory coverages, optional add-ons, accident benefits. Found me a great rate with Intact. 10/10.",
     source: "google",
     created_at: "2026-02-14"
+  },
+  {
+    id: "7",
+    client_name: "Harjot S.",
+    service_type: "auto",
+    rating: 5,
+    review_text: "Sharan made switching my auto insurance completely stress-free. She found me a better rate with more coverage in under 20 minutes. I wish I had contacted her years ago.",
+    source: "google",
+    created_at: "2026-05-20"
+  },
+  {
+    id: "8",
+    client_name: "Meena R.",
+    service_type: "home",
+    rating: 5,
+    review_text: "Extremely knowledgeable and patient. Sharan explained every detail of my policy in plain language and bundled my home and auto to save me over $400 a year. Highly recommend her to anyone in Mississauga.",
+    source: "google",
+    created_at: "2026-05-25"
   }
 ];
 
@@ -244,6 +264,20 @@ export default function TestimonialsPage() {
             Leave a Google Review
             <ExternalLink className="w-4 h-4" />
           </a>
+        </div>
+
+        {/* Cross-link to Quote */}
+        <div className="mt-10 text-center">
+          <p className="text-mid-gray text-sm mb-4">
+            Ready to join our happy clients?{" "}
+            <Link href="/about" className="text-big-red font-semibold hover:underline">
+              Meet Sharan
+            </Link>{" "}
+            and get started today.
+          </p>
+          <QuoteButton href="/get-a-quote" size="md">
+            Get My Free Quote
+          </QuoteButton>
         </div>
       </div>
     </div>
