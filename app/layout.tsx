@@ -38,7 +38,6 @@ export const metadata: Metadata = {
     icon: "/favicon.png",
   },
   manifest: "/manifest.json",
-  // TODO: add /public/icon-192.png and /public/icon-512.png referenced by manifest.json
   keywords: [
     "insurance broker Mississauga",
     "home insurance Ontario",
