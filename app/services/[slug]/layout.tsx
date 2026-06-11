@@ -7,19 +7,19 @@ const SERVICE_META: Record<
   { title: string; description: string; name: string }
 > = {
   "home-insurance": {
-    title: "Home Insurance Mississauga | Sharan Kaur — RIBO Broker",
+    title: "Home Insurance Broker Mississauga & Brampton | Free Quotes | Sharan Kaur",
     description:
       "Get the best home insurance rates in Mississauga. Sharan Kaur shops 30+ carriers to find your perfect coverage. Free quote today.",
     name: "Home Insurance",
   },
   "auto-insurance": {
-    title: "Auto Insurance Mississauga | Compare Rates — Sharan Kaur",
+    title: "Auto Insurance Broker Mississauga | Newcomers & G2 Drivers | Sharan Kaur",
     description:
       "Save on auto insurance in Mississauga. RIBO-licensed broker Sharan Kaur compares Ontario's top carriers for the best rate. Call (647) 501-8013.",
     name: "Auto Insurance",
   },
   "life-insurance": {
-    title: "Life Insurance Mississauga | Term & Permanent — Sharan Kaur",
+    title: "Life Insurance Broker Mississauga | Families & New Immigrants | Sharan Kaur",
     description:
       "Protect your family with life insurance in Mississauga. Sharan Kaur offers term, permanent, and critical illness coverage tailored to you.",
     name: "Life Insurance",
