@@ -231,6 +231,36 @@ export default function FAQPage() {
             </a>
           </div>
         </div>
+
+        {/* Helpful Resources */}
+        <div className="mt-16 max-w-3xl mx-auto space-y-6">
+          <h3 className="font-poppins font-bold text-2xl text-big-dark text-center">
+            Helpful Resources
+          </h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {[
+              { href: "/mississauga-insurance-broker", label: "Insurance Broker in Mississauga" },
+              { href: "/brampton-insurance-broker", label: "Insurance Broker in Brampton" },
+              { href: "/blog/car-insurance-newcomers-ontario", label: "Car Insurance for Newcomers to Ontario: A Complete Guide" },
+              { href: "/blog/auto-insurance-international-license-ontario", label: "Can You Get Auto Insurance in Ontario With an International Driver's License?" },
+              { href: "/blog/insurance-broker-vs-agent-ontario", label: "Insurance Broker vs. Insurance Agent in Ontario: What's the Difference?" },
+              { href: "/blog/g2-driver-car-insurance-mississauga", label: "G2 Driver Car Insurance in Mississauga: How to Get Affordable Rates" },
+              { href: "/blog/home-insurance-first-time-buyers-mississauga", label: "Home Insurance for First-Time Buyers in Mississauga: What You Need to Know" },
+              { href: "/blog/life-insurance-new-immigrants-canada", label: "Life Insurance for New Immigrants to Canada: A Beginner's Guide" },
+            ].map((resource) => (
+              <Link
+                key={resource.href}
+                href={resource.href}
+                className="p-5 bg-white border border-gray-150 rounded-2xl flex items-center justify-between gap-4 hover:border-big-red/20 hover:shadow-md transition-all group"
+              >
+                <span className="font-poppins font-semibold text-sm text-big-dark group-hover:text-big-red transition-colors">
+                  {resource.label}
+                </span>
+                <ArrowRight className="w-4 h-4 text-big-red shrink-0 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );

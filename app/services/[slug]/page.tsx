@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { createClient } from "@/lib/supabase/client";
-import { Home, Car, Heart, Briefcase, Plane, ChevronLeft, ShieldCheck, CheckCircle2 } from "lucide-react";
+import { Home, Car, Heart, Briefcase, Plane, ChevronLeft, ShieldCheck, CheckCircle2, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import QuoteButton from "@/components/ui/QuoteButton";
@@ -37,6 +37,33 @@ const getServiceImageFallback = (slug: string) => {
     default:
       return "";
   }
+};
+
+const BLOG_META: Record<string, string> = {
+  "car-insurance-newcomers-ontario": "Car Insurance for Newcomers to Ontario: A Complete Guide",
+  "auto-insurance-international-license-ontario": "Can You Get Auto Insurance in Ontario With an International Driver's License?",
+  "insurance-broker-vs-agent-ontario": "Insurance Broker vs. Insurance Agent in Ontario: What's the Difference?",
+  "g2-driver-car-insurance-mississauga": "G2 Driver Car Insurance in Mississauga: How to Get Affordable Rates",
+  "home-insurance-first-time-buyers-mississauga": "Home Insurance for First-Time Buyers in Mississauga: What You Need to Know",
+  "life-insurance-new-immigrants-canada": "Life Insurance for New Immigrants to Canada: A Beginner's Guide",
+};
+
+const RELATED_GUIDES: Record<string, string[]> = {
+  "auto-insurance": [
+    "car-insurance-newcomers-ontario",
+    "auto-insurance-international-license-ontario",
+    "g2-driver-car-insurance-mississauga",
+  ],
+  "home-insurance": [
+    "home-insurance-first-time-buyers-mississauga",
+    "insurance-broker-vs-agent-ontario",
+  ],
+  "life-insurance": [
+    "life-insurance-new-immigrants-canada",
+    "insurance-broker-vs-agent-ontario",
+  ],
+  "business-insurance": ["insurance-broker-vs-agent-ontario"],
+  "travel-insurance": ["insurance-broker-vs-agent-ontario"],
 };
 
 const iconMap: Record<string, any> = {
@@ -273,6 +300,29 @@ export default function ServiceDetailPage() {
                 ))}
               </div>
             </div>
+
+            {/* Related Guides */}
+            {RELATED_GUIDES[service.slug] && (
+              <div className="space-y-6 border-t border-gray-100 pt-10">
+                <h2 className="font-poppins font-bold text-2xl sm:text-3xl text-big-dark">
+                  Related Guides
+                </h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {RELATED_GUIDES[service.slug].map((blogSlug) => (
+                    <Link
+                      key={blogSlug}
+                      href={`/blog/${blogSlug}`}
+                      className="p-5 bg-light-gray/60 border border-gray-150 rounded-2xl flex items-center justify-between gap-4 hover:bg-white hover:border-big-red/20 hover:shadow-md transition-all group"
+                    >
+                      <h4 className="font-poppins font-bold text-sm text-big-dark group-hover:text-big-red transition-colors">
+                        {BLOG_META[blogSlug]}
+                      </h4>
+                      <ArrowRight className="w-4 h-4 text-big-red shrink-0 group-hover:translate-x-1 transition-transform" />
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
 
           {/* Right Column: Sidebar Form or Contact Widget */}
