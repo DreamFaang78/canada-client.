@@ -16,6 +16,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/faq": "2026-05-15",
     "/contact": "2026-05-15",
     "/get-a-quote": "2026-05-15",
+    "/blog": "2026-06-15",
     "/gallery": "2026-05-15",
     "/privacy-policy": "2026-05-15",
     "/cookie-policy": "2026-05-15",
@@ -44,6 +45,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/faq": 0.7,
     "/contact": 0.7,
     "/get-a-quote": 0.8,
+    "/blog": 0.7,
     "/gallery": 0.5,
     "/privacy-policy": 0.5,
     "/cookie-policy": 0.5,
@@ -68,6 +70,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/faq",
     "/contact",
     "/get-a-quote",
+    "/blog",
     "/privacy-policy",
     "/cookie-policy"
   ];

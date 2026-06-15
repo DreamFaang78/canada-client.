@@ -39,6 +39,7 @@ const quickLinks = [
   { label: "About Sharan Kaur", href: "/about" },
   { label: "Get a Quote", href: "/get-a-quote" },
   { label: "Testimonials", href: "/testimonials" },
+  { label: "Blog", href: "/blog" },
   { label: "FAQ", href: "/faq" },
   { label: "Gallery", href: "/gallery" },
   { label: "Contact", href: "/contact" },

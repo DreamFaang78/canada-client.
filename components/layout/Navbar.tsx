@@ -19,10 +19,12 @@ const navLinks = [
       { label: "Auto Insurance", href: "/services/auto-insurance" },
       { label: "Life Insurance", href: "/services/life-insurance" },
       { label: "Business Insurance", href: "/services/business-insurance" },
+      { label: "Travel Insurance", href: "/services/travel-insurance" },
     ],
   },
   { label: "About", href: "/about" },
   { label: "Testimonials", href: "/testimonials" },
+  { label: "Blog", href: "/blog" },
   { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" },
 ];
