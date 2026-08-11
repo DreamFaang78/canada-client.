@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { MapPin, ArrowRight } from "lucide-react";
 import HeroSection from "@/app/sections/HeroSection";
+import HeroReviewStrip from "@/components/ui/HeroReviewStrip";
 import StatsBar from "@/app/sections/StatsBar";
 import ServicesGrid from "@/app/sections/ServicesGrid";
 import WhySharan from "@/app/sections/WhySharan";
@@ -127,6 +128,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
       />
       <HeroSection />
+      <HeroReviewStrip />
       <StatsBar />
       <ServicesGrid />
       <WhySharan />

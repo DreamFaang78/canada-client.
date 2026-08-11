@@ -5,6 +5,8 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import CookieBanner from "@/components/ui/CookieBanner";
 import MobileStickyBar from "@/components/ui/MobileStickyBar";
+import ExitIntentModal from "@/components/ui/ExitIntentModal";
+import WhatsAppBubble from "@/components/ui/WhatsAppBubble";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -44,7 +46,7 @@ export const metadata: Metadata = {
     "auto insurance Mississauga",
     "life insurance broker",
     "business insurance Ontario",
-    "Billyard Insurance Group",
+    "Sharan Kaur Insurance",
     "RIBO broker",
     "Sharan Kaur insurance",
   ],
@@ -52,17 +54,17 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_CA",
     url: SITE_URL,
-    siteName: "Sharan Kaur — BIG Insurance",
+    siteName: "Sharan Kaur Insurance Broker",
     title:
-      "Sharan Kaur — Insurance Broker in Mississauga | Home, Auto, Life, Business & Travel | Think BIG.",
+      "Sharan Kaur — Insurance Broker in Mississauga | Home, Auto, Life, Business & Travel",
     description:
-      "Sharan Kaur is a licensed RIBO insurance broker with Billyard Insurance Group in Mississauga. Get personalized quotes for home, auto, life, and business insurance. Call (647) 501-8013 today.",
+      "Sharan Kaur is a licensed RIBO insurance broker in Mississauga. Get personalized quotes for home, auto, life, and business insurance. Call (647) 501-8013 today.",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Sharan Kaur — BIG Insurance Broker in Mississauga",
+        alt: "Sharan Kaur — Insurance Broker in Mississauga",
       },
     ],
   },
@@ -107,6 +109,8 @@ export default function RootLayout({
         <main id="main-content">{children}</main>
         <Footer />
         <MobileStickyBar />
+        <WhatsAppBubble />
+        <ExitIntentModal />
         <CookieBanner />
       </body>
     </html>

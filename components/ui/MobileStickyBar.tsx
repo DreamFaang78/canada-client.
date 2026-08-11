@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { Phone, MessageSquare } from "lucide-react";
+import { trackConversion } from "@/lib/analytics";
 
 export default function MobileStickyBar() {
   return (
@@ -10,6 +11,7 @@ export default function MobileStickyBar() {
         <a
           href="tel:+16475018013"
           id="mobile-sticky-call"
+          onClick={() => trackConversion("mobile_sticky_call", { href: "tel:+16475018013" })}
           className="flex items-center justify-center gap-2 text-sm font-semibold text-big-red border-r border-gray-200 hover:bg-red-50 transition-colors active:bg-red-100"
         >
           <Phone className="w-4 h-4" />
@@ -18,10 +20,11 @@ export default function MobileStickyBar() {
         <Link
           href="/get-a-quote"
           id="mobile-sticky-quote"
+          onClick={() => trackConversion("mobile_sticky_quote", { href: "/get-a-quote" })}
           className="flex items-center justify-center gap-2 text-sm font-semibold text-white bg-big-red hover:bg-deep-red transition-colors active:bg-deep-red"
         >
           <MessageSquare className="w-4 h-4" />
-          Get a Quote
+          Get Quote
         </Link>
       </div>
     </div>

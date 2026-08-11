@@ -20,7 +20,7 @@ VALUES
     {"title": "Overland Water", "description": "Protection against flooding — now available in most Mississauga policies"},
     {"title": "Earthquake & Sewer Backup", "description": "Optional add-ons Sharan will recommend based on your property"}
   ]',
-  'Home Insurance in Mississauga | Sharan — Billyard Insurance Group',
+  'Home Insurance in Mississauga | Sharan Kaur Insurance',
   'Get the best home insurance rates in Mississauga. Sharan compares 30+ insurers for your home, condo, or rental property. Free quote in minutes.',
   1
 ),
@@ -38,7 +38,7 @@ VALUES
     {"title": "Comprehensive", "description": "Protection against theft, fire, weather, and vandalism"},
     {"title": "OPCF Endorsements", "description": "Custom add-ons like rental vehicle, accident forgiveness, and waiver of depreciation"}
   ]',
-  'Auto Insurance in Mississauga | Sharan — Billyard Insurance Group',
+  'Auto Insurance in Mississauga | Sharan Kaur Insurance',
   'Find the lowest auto insurance rates in Mississauga. Compare 30+ Ontario insurers with broker Sharan. Save hundreds on your car insurance today.',
   2
 ),
@@ -56,7 +56,7 @@ VALUES
     {"title": "Disability Insurance", "description": "Income replacement if you can''t work due to illness or injury"},
     {"title": "Mortgage Protection", "description": "Ensures your mortgage is paid off if something happens to you"}
   ]',
-  'Life Insurance in Mississauga | Sharan — Billyard Insurance Group',
+  'Life Insurance in Mississauga | Sharan Kaur Insurance',
   'Get the right life insurance coverage in Mississauga. Sharan explains your options clearly and compares the best policies for your family. Free consultation.',
   3
 ),
@@ -74,7 +74,7 @@ VALUES
     {"title": "Commercial Auto", "description": "Vehicle insurance for company cars, delivery vans, or fleets"},
     {"title": "Cyber Liability", "description": "Protection against data breaches and cyber attacks — increasingly important for all businesses"}
   ]',
-  'Business Insurance in Mississauga | Sharan — Billyard Insurance Group',
+  'Business Insurance in Mississauga | Sharan Kaur Insurance',
   'Protect your Mississauga business with the right commercial insurance. Sharan builds custom coverage packages for small businesses. Get a free quote today.',
   4
 );
@@ -166,7 +166,7 @@ VALUES
 -- SETTINGS (default values)
 INSERT INTO settings (key, value, value_type)
 VALUES
-('business_name', 'Billyard Insurance Group', 'string'),
+('business_name', 'Sharan Kaur Insurance', 'string'),
 ('broker_name', 'Sharan', 'string'),
 ('phone', '647.501.8013', 'string'),
 ('email', 'sharan@thebig.ca', 'string'),

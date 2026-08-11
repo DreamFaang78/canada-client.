@@ -53,7 +53,7 @@ const FALLBACK_ITEMS: GalleryItem[] = [
   {
     id: "6",
     title: "Business Representation",
-    description: "Representing Billyard Insurance Group (BIG) with modern commercial and personal insurance branding.",
+    description: "Providing modern commercial and personal insurance coverage across Mississauga and Ontario.",
     image_url: "/Coverage card.jpeg",
     category: "events"
   }
@@ -253,7 +253,7 @@ export default function GalleryPage() {
                   </p>
                 </div>
                 <div className="pt-6 border-t border-gray-100 text-xs text-mid-gray mt-6">
-                  Billyard Insurance Group — Mississauga Branch
+                  Sharan Kaur Insurance — Mississauga Office
                 </div>
               </div>
             </motion.div>

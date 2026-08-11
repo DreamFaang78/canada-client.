@@ -7,9 +7,9 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 const contactSchema = z.object({
   name: z.string().min(1).max(200),
-  email: z.string().email(),
-  phone: z.string().max(20).optional(),
-  message: z.string().min(10).max(3000),
+  email: z.string().email().optional().or(z.literal("")),
+  phone: z.string().min(7).max(25),
+  message: z.string().min(1).max(3000),
 });
 
 // Simple in-memory rate limit
@@ -42,23 +42,24 @@ export async function POST(req: NextRequest) {
     const data = contactSchema.parse(body);
 
     const supabase = createServiceClient();
+    const clientEmail = data.email || "callback@sharanbroker.com";
     await supabase.from("contact_submissions").insert({
       name: data.name,
-      email: data.email,
-      phone: data.phone || null,
+      email: clientEmail,
+      phone: data.phone,
       message: data.message,
     });
 
     await resend.emails.send({
-      from: "BIG Insurance Website <noreply@thebig.ca>",
-      to: process.env.ADMIN_EMAIL || "sharan@thebig.ca",
-      subject: `Contact Form Message from ${data.name}`,
+      from: "Sharan Kaur Insurance <noreply@sharanbroker.com>",
+      to: process.env.ADMIN_EMAIL || "sharan@sharanbroker.com",
+      subject: `New Contact/Callback Request from ${data.name}`,
       html: `
-        <h2>New Contact Form Submission</h2>
+        <h2>New Contact / Callback Submission</h2>
         <p><strong>Name:</strong> ${data.name}</p>
-        <p><strong>Email:</strong> ${data.email}</p>
-        <p><strong>Phone:</strong> ${data.phone || "N/A"}</p>
-        <p><strong>Message:</strong></p>
+        <p><strong>Phone:</strong> ${data.phone}</p>
+        <p><strong>Email:</strong> ${data.email || "N/A (Phone Callback)"}</p>
+        <p><strong>Message / Details:</strong></p>
         <p>${data.message.replace(/\n/g, "<br>")}</p>
       `,
     });

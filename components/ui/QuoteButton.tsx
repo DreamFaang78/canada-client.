@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { trackConversion } from "@/lib/analytics";
 import { ButtonHTMLAttributes } from "react";
 
 interface QuoteButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -37,13 +38,10 @@ export default function QuoteButton({
   ...props
 }: QuoteButtonProps) {
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    // Fire GA4 event if analytics enabled
-    if (gaLabel && typeof window !== "undefined" && (window as any).gtag) {
-      (window as any).gtag("event", "cta_click", {
-        cta_label: gaLabel,
-        page_location: window.location.href,
-      });
-    }
+    trackConversion("cta_click", {
+      cta_label: gaLabel || (typeof children === "string" ? children : "Quote Button"),
+      page_location: typeof window !== "undefined" ? window.location.href : "",
+    });
     onClick?.(e);
   };
 
@@ -56,7 +54,16 @@ export default function QuoteButton({
 
   if (href) {
     return (
-      <Link href={href} className={classes}>
+      <Link
+        href={href}
+        className={classes}
+        onClick={() => {
+          trackConversion("cta_click", {
+            cta_label: gaLabel || (typeof children === "string" ? children : "Quote Link"),
+            href,
+          });
+        }}
+      >
         {children}
       </Link>
     );

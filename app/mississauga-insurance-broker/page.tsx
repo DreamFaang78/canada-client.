@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Home, Car, Heart, Briefcase, Plane, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 import QuoteButton from "@/components/ui/QuoteButton";
+import LocalQuoteForm from "@/components/ui/LocalQuoteForm";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.sharanbroker.com";
 const CITY = "Mississauga";
@@ -116,18 +117,29 @@ export default function MississaugaInsuranceBrokerPage() {
       <div className="bg-big-dark text-white py-14 md:py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-big-red/10 to-transparent z-0" />
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
-          <h1 className="font-poppins font-bold text-3xl sm:text-5xl leading-tight">
-            Insurance Broker in {CITY}
-          </h1>
-          <p className="text-gray-300 text-lg max-w-3xl font-light leading-relaxed mt-4">
-            Sharan Kaur is a RIBO-licensed insurance broker serving {CITY} and the Greater
-            Toronto Area. Compare auto, home, life, and business insurance from 30+ carriers
-            and get a free quote — with bilingual service in English and Punjabi.
-          </p>
-          <div className="mt-8">
-            <QuoteButton href="/get-a-quote" size="lg">
-              Get a Free Quote
-            </QuoteButton>
+          <div className="grid lg:grid-cols-12 gap-8 items-center mt-6">
+            <div className="lg:col-span-7">
+              <h1 className="font-poppins font-bold text-3xl sm:text-5xl leading-tight">
+                Insurance Broker in {CITY}
+              </h1>
+              <p className="text-gray-300 text-lg font-light leading-relaxed mt-4">
+                Sharan Kaur is a RIBO-licensed insurance broker serving {CITY} and the Greater
+                Toronto Area. Compare auto, home, life, and business insurance from 30+ carriers
+                and get a free quote — with bilingual service in English and Punjabi.
+              </p>
+              <div className="mt-6 flex flex-wrap gap-4 text-xs text-gray-300">
+                <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1.5 rounded-full border border-white/10">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-green-400" /> 30+ Insurers
+                </span>
+                <span className="flex items-center gap-1.5 bg-white/10 px-3 py-1.5 rounded-full border border-white/10">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-green-400" /> Free Quotes
+                </span>
+              </div>
+            </div>
+
+            <div className="lg:col-span-5 text-big-dark">
+              <LocalQuoteForm cityName={CITY} />
+            </div>
           </div>
         </div>
       </div>

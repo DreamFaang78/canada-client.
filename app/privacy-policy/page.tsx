@@ -14,7 +14,7 @@ export default function PrivacyPolicyPage() {
 
         <div className="space-y-6 text-charcoal text-sm leading-relaxed font-light">
           <p>
-            At Billyard Insurance Group (operating as Sharan Kaur, Insurance Broker), we are committed to maintaining the accuracy, confidentiality, and security of your personal information. This Privacy Policy describes the personal information we collect from or about you, how we use it, and to whom we disclose it.
+            At Sharan Kaur Insurance (operating as Sharan Kaur, Insurance Broker), we are committed to maintaining the accuracy, confidentiality, and security of your personal information. This Privacy Policy describes the personal information we collect from or about you, how we use it, and to whom we disclose it.
           </p>
 
           <h2 className="font-poppins font-bold text-xl text-big-dark pt-4">1. Compliance with Regulations</h2>

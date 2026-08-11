@@ -8,6 +8,7 @@ import {
   IconHome, IconCar, IconHeart, IconBuilding
 } from "@/components/ui/BIGIcons";
 import AnimatedCounter from "@/components/ui/AnimatedCounter";
+import HeroInlineQuote from "@/components/ui/HeroInlineQuote";
 
 const trustBadges = [
   { Icon: IconStar, label: "Google Rating", value: "4.9", suffix: "/5" },
@@ -53,7 +54,7 @@ export default function HeroSection() {
               className="inline-flex items-center gap-2 bg-white/10 backdrop-blur border border-white/20 text-white/90 text-xs font-medium px-4 py-2 rounded-full mb-6"
             >
               <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-              RIBO Licensed Broker · Billyard Insurance Group
+              RIBO Licensed Broker · Mississauga, ON
             </motion.div>
 
             <motion.h1
@@ -86,24 +87,21 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="flex flex-col sm:flex-row gap-4 mb-10"
+              className="mb-8 space-y-4"
             >
-              <Link
-                href="/get-a-quote"
-                id="hero-quote-cta"
-                className="inline-flex items-center justify-center gap-2 bg-big-red hover:bg-deep-red text-white font-semibold px-8 py-4 rounded-xl transition-all hover:shadow-2xl hover:-translate-y-0.5 text-sm"
-              >
-                Get My Free Quote
-                <IconArrowRight size={16} className="text-white" />
-              </Link>
-              <a
-                href="tel:+16475018013"
-                id="hero-call-cta"
-                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur border border-white/30 text-white font-semibold px-8 py-4 rounded-xl transition-all text-sm"
-              >
-                <IconPhone size={16} className="text-white" />
-                (647) 501-8013
-              </a>
+              {/* Inline 2-step quote flow */}
+              <HeroInlineQuote />
+
+              <div className="pt-2 flex items-center gap-3">
+                <a
+                  href="tel:+16475018013"
+                  id="hero-call-cta"
+                  className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur border border-white/30 text-white font-semibold px-6 py-2.5 rounded-xl transition-all text-xs sm:text-sm"
+                >
+                  <IconPhone size={16} className="text-white" />
+                  Or Call Direct: (647) 501-8013
+                </a>
+              </div>
             </motion.div>
 
             {/* Trust indicators */}

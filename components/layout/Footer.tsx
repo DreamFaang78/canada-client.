@@ -68,7 +68,7 @@ export default function Footer() {
               insurance solutions.
             </p>
             <p className="text-sm text-white/60 leading-relaxed mb-6">
-              Member of Billyard Insurance Group · Mississauga West
+              Independent Insurance Brokerage · Mississauga West
             </p>
             <div className="flex gap-3">
               <a
@@ -186,7 +186,7 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs text-white/40">
-            © {new Date().getFullYear()} Sharan Kaur — Billyard Insurance Group. All rights reserved.
+            © {new Date().getFullYear()} Sharan Kaur Insurance. All rights reserved.
           </p>
           <div className="flex items-center gap-4 text-xs text-white/40">
             <Link href="/privacy-policy" className="hover:text-white/70 transition-colors">

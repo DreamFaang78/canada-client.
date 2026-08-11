@@ -106,7 +106,7 @@ I compared three sources of Name/Address/Phone:
 {
   "@type": ["InsuranceAgency", "LocalBusiness"],
   "@id": "https://www.sharanbroker.com/#business",
-  "name": "Sharan Kaur — Billyard Insurance Group",
+  "name": "Sharan Kaur Insurance",
   "url": "https://www.sharanbroker.com",
   "telephone": "+1-647-501-8013",
   "email": "sharan@thebig.ca",

@@ -50,7 +50,7 @@ export default function AboutPage() {
             <h1 className="font-poppins font-bold text-4xl sm:text-5xl mb-4">
               Sharan Kaur
             </h1>
-            <p className="text-big-red/80 font-medium text-lg mb-4">RIBO Licensed Insurance Broker · Billyard Insurance Group · Mississauga, ON</p>
+            <p className="text-big-red/80 font-medium text-lg mb-4">RIBO Licensed Insurance Broker · Mississauga, ON</p>
             <p className="text-gray-300 text-lg sm:text-xl font-light leading-relaxed">
               Dedicated to protecting your family, business, and assets with personalized service and expert guidance — not just a policy number.
             </p>
